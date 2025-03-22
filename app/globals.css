@@ -38,6 +38,7 @@
     transform: translateY(-15px) rotate(45deg);
   }
 }
+
 body {
   padding: 0;
   margin: 0;
@@ -45,20 +46,7 @@ body {
   overscroll-behavior: none;
 }
 
-.chapter-div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
 .text-one {
-  font-size: 20px;
-  color: white;
-}
-
-.chapter-text {
   font-size: 20px;
   color: white;
 }
@@ -66,17 +54,19 @@ body {
 .sky {
   width: 100vw;
   height: 100vh;
-  z-index: 1;
-}
-
-.signupsuccess {
-  color: white;
+  z-index: 2;
+  /* border: 100px solid red; */
 }
 
 .sky-inner {
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 2;
+  /* border: 10px solid red; */
+}
+
+.signupsuccess {
+  color: white;
 }
 
 .castle {
@@ -87,13 +77,24 @@ body {
   width: 100vw;
   height: 100vh;
   z-index: 5;
+  border: 1px solid red;
 }
 
 .castle-inner {
   object-fit: contain;
   width: 100%;
   height: 100%;
-  z-index: 2;
+  z-index: 5;
+  border: 1px solid blue;
+}
+
+.lake-stationary-inner {
+  position: relative;
+  bottom: 350px;
+  z-index: 20;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
 }
 
 .fogOne {
@@ -105,7 +106,7 @@ body {
   left: 0;
   width: 100vw;
   height: 30vh;
-  z-index: 10;
+  z-index: 30;
 }
 
 .fogone-inner {
@@ -113,58 +114,20 @@ body {
   /* object-fit: contain; */
   width: 100%;
   height: 100%;
-  z-index: 10;
-}
-
-.fogTwo {
-  display: flex;
-  justify-content: start;
-  object-fit: contain;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100vw;
-  height: 30vh;
-  z-index: 10;
-}
-
-.fogtwo-inner {
-  object-fit: contain;
-  /* padding-top: 20vh; */
-  width: 50%;
-  height: 50%;
-  z-index: 10;
-}
-.amber-queen {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  position: absolute;
-  bottom: 60vh;
-  left: 30vw;
-  z-index: 3;
-  font-size: 100px;
-  font-weight: bold;
-  color: black;
-  z-index: 6;
-}
-
-.coronation {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  bottom: 50vh;
-  left: 32.5vw;
-  z-index: 3;
-  font-size: 45px;
-  color: black;
-  z-index: 6;
+  z-index: 30;
 }
 
 .text {
-  height: 7vw;
+  height: 9vw;
   object-fit: contain;
+  padding: 0;
+  margin: 0;
+}
+
+.text-queen {
+  position: relative;
+  bottom: 30px;
+  right: 10px;
 }
 
 .amberqueencontainer {
@@ -176,17 +139,20 @@ body {
   align-items: center;
   position: absolute;
   top: 6vh;
-  z-index: 10;
+  z-index: 4;
+  padding: 0;
+  margin: 0;
 }
 
 .lake {
-  z-index: 5;
+  z-index: 20;
   object-fit: contain;
   position: absolute;
-  top: 680px;
+  top: 700px;
   left: 0;
   width: 100%;
   height: 100%;
+  /* border: 10px solid yellow; */
 }
 
 .lake-inner {
@@ -195,18 +161,8 @@ body {
   height: 100%;
 }
 
-.lake-stationary-inner {
-  z-index: 20;
-  left: 0;
-  top: 600px;
-  position: absolute;
-  object-fit: contain;
-  width: 100%;
-  height: 100%;
-}
-
 .underwater {
-  z-index: 15;
+  z-index: 35;
   /* object-fit: contain; */
   object-fit: cover;
   position: relative;
@@ -339,13 +295,6 @@ body {
   border-top-right-radius: 8px;
 }
 
-.headertwo {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .modal-footer {
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
@@ -404,6 +353,7 @@ body {
 }
 
 .black-screen {
+  z-index: 1;
   height: 100vh;
   width: 100vw;
   background-color: black;

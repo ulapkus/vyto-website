@@ -22,14 +22,15 @@ export default function Landscape() {
   const [imageSrcTwo, setImageSrcTwo] = useState(twoagain);
   const [imageSrcThree, setImageSrcThree] = useState(threeagain);
   const [showModal, setShowModal] = useState(false);
-  const [currentPage, setCurrentPage] = useState(0); // 0 for prologue, 1 for chapter 1, etc.
+  const [currentPage, setCurrentPage] = useState(0);
 
   const { scrollY } = useScroll();
   const y1 = useTransform(scrollY, [0, 1000], [0, -200]);
-  const y2 = useTransform(scrollY, [0, 1000], [0, -500]);
+  const y2 = useTransform(scrollY, [0, 1000], [0, -100]);
   const y3 = useTransform(scrollY, [0, 1000], [0, -500]);
 
-  const scale = useTransform(scrollY, [0, 1000], [1.3, 1.0]);
+  const scale = useTransform(scrollY, [0, 1000], [1.2, 1]);
+  const scaleCastle = useTransform(scrollY, [0, 800], [1.3, 1]);
   const scaleY = useTransform(scrollY, [0, 1000], [1, 0.5]);
 
   const bookPages = [
@@ -79,7 +80,6 @@ A man was sitting in his favorite rocking chair on the dock.  Undeterred by the 
 From behind sliding glass doors, a pair of blue eyes watched the  eagle pick a branch. It passed the quivering ash tree, as all other  birds do. But it also passed the majestic oak, the white-barked  birch, and the hanging threads of a weeping willow. 
 The woman with the blue eyes stepped out from behind the  sliding glass doors, stepping to get a closer look at the visitor. Her  kids, home from college for the weekend, also watched from their  perches in the giant sycamore. 
 The eagle flapped its wings and perched at the crown of a pine  tree. The woman's daughter, Eglė, smiled as the eagle settled on  her namesake.
-5 
 Shivering, a reminder that it was still February, the woman went  back inside to add layers. She glanced at a screen that showed the  latest news. The world felt like it had been falling apart for years,  but some news still managed to emanate disbelief. 
 The US was beginning its steps to leave the Friends Together  Alliance. The House passed the 'America Alone Act.' 
 For America, it was another break from the old world order. For  Eastern Europe, this meant its invisible shield was fizzling fast. 
@@ -90,13 +90,11 @@ She pulled out the record from the case, maneuvering it to a  hovering record pl
 A steady beat pulsated through the house. As if marching towards  war, the voices began to sing 'Zog nit keyn mol'. 'Never Say' 
 The séance began. 
 Translation from Yiddish below.
-6 
 זאָ ג ניט קיין מאָ ל, אַ ז דו גייסט דעם לעצטן וועג, כאָ טש הימלען בלײַ ענע פֿאַ רשטעלן בלויע טעג. קומען וועט נאָ ך אונדזער אויסגעבענקטע שעה – ס׳וועט אַ פּויק טאָ ן אונדזער טראָ ט: מיר זײַ נען דאָ ! 
 פֿון גרינעם פּאַ למענלאַ נד ביז ווײַ סן לאַ נד פֿון שניי, מיר קומען אָ ן מיט אונדזער פּײַ ן, מיט אונדזער וויי , און וווּ געפֿאַ לן ס׳איז אַ שפּריץ פֿון אונדזער בלוט, שפּראָ צן וועט דאָ רט אונדזער גבֿורה, אונדזער מוט ! 
 ס׳וועט די מאָ רגנזון באַ גילדן אונדז דעם הײַ נט, און דער נעכטן וועט פֿאַ רשווינדן מיט דעם פֿײַ נט, נאָ ר אויב פֿאַ רזאַ מען וועט די זון אין דעם קאַ יאָ ר – ווי אַ פּאַ ראָ ל זאָ ל גיין דאָ ס ליד פֿון דור צו דור. 
 דאָ ס ליד געשריבן איז מיט בלוט, און ניט מיט בלײַ , ס׳איז ניט קיין לידל פֿון אַ פֿויגל אויף דער פֿרײַ , דאָ ס האָ ט אַ פֿאָ לק צווישן פֿאַ לנדיקע ווענט  דאָ ס ליד געזונגען מיט נאַ גאַ נעס אין די הענט. 
 טאָ זאָ ג ניט קיין מאָ ל, אַ ז דו גייסט דעם לעצטן וועג , כאָ טש הימלען בלײַ ענע פֿאַ רשטעלן בלויע טעג. קומען וועט נאָ ך אונדזער אויסגעבענקטע שעה – ס׳וועט אַ פּויק טאָ ן אונדזער טראָ ט: מיר זײַ נען דאָ !
-7 
 Never say that you're going your last way 
 Although the skies filled with lead cover blue days Our promised hour will soon come 
 Our marching steps ring out: 'We are here!' 
@@ -112,7 +110,6 @@ This song was sung by people amidst collapsing walls Sung with pistols in their 
 So never say that you're going your last way 
 Although the skies filled with lead cover blue days Our promised hour will soon come 
 Our marching steps ring out: 'We are here'!
-8 
 The righteous anger permeated from the voice against those who  executed an apocalypse on the land she loved and now walked— Lithuania. She called upon the spirits of the dead, seeking their  help in her fight for the living, so they might help prevent another  apocalypse from ravaging Eastern Europe. 
 The song ended, and the sound of a single violin string brought  calm to the house. The woman allowed herself to feel the pain of  Eastern Europe. She let a single tear drop down her cheek. 
 There's a time to ruminate on the past and fear for the future.  There's also a time to enjoy the present. 
@@ -121,7 +118,6 @@ The sliding glass doors opened, and a gentle breeze fluttered the  woman's blond
 She approached the man at the dock, setting eyes on how she'd  spring upon the man without alerting him. Her gaze met that of  her two kids, perched in their favorite tree, still keeping watch over  the visiting eagle. Lifting a finger to her lips, she signaled for them  to stay quiet. Then, she crept up behind the fisherman and  whispered in his ear. 
 "Kas – tee – tissssssssssssssssssssssssss" and she held onto the  final "sss" until Kastytis twitched his head away and dug his ear  into his shoulder. 
 Then Kastytis bellowed in response, seeing how long he could roll  his 'r.' "You-rrrrrrrrrrrrrrrrr-ahh-tehh".
-9 
 Jūratė hugged his chest, kissing him on the back of the  head. "Ticklish?" 
 Kastytis kept his shoulder to his ear. "Barely." 
 The couple looked over the water sparkling in the sun. Jūratė took  a breath before sharing - yet again - her fears that their world was  headed for catastrophe. 
@@ -133,7 +129,6 @@ Kastytis cast over another line into the water. He seemed at peace,  so why dist
 Maybe it wasn't time to panic just yet, but it was long past time to  call an old friend. Jūratė dialed the number. At first, an unfamiliar  but pleasant voice answered the phone. 
 "Hello, this is the White House. How may I direct your call?" 
 "This is Jūratė Didžiulis. I'm looking for Harri – I mean President  Jefferson."
-10 
 "Ma'am, you may leave a message and I will pass along your  message to the appropriate staff. You said your name was You - rr…. I'm sorry, could you repeat your name?" 
 There was some fumbling on the other end of the phone. Jūratė could hear distant chatter and what sounded like someone saying  her name. This time, a familiar voice came through. 
 "Jura!!" 
@@ -145,7 +140,6 @@ Let's catch up later, but what's up? You calling about the House  vote on the Am
 "How'd you guess?" 
 Harriett was ready to vent. "Jura, you wouldn't believe the people I  have to deal with." Jūratė eased, knowing that it was still easy to  talk with her old friend and continued to listen. 
 "So the House passed the America Alone Act, but that's not the  end. The bill still has to pass the Senate, but I'm afraid its chances  of passing there are high too." Jūratė was worried, but continued  to listen.
-11 
 "If the bill passes the Senate, I can still veto, but there might be  enough votes in the House and Senate to override my veto." 
 Jūratė grasped for optimism. "Is it a done deal though? There still  a chance the US might not leave Friends Together?" 
 "It's all up in the air Jura, but it's not looking good." President  Jefferson let the analysis sink in for a moment. 
@@ -165,7 +159,6 @@ No matter how deeply she related to the story of a people starving  for freedom,
 She stood up tall and brought her chin up. She was President  Harriet Jefferson, after all. She wielded power that the first  President Jefferson couldn’t even imagine. 
 She’d have to pull herself together before stepping into the Oval  to meet with David Perez. 
 My dear reader, there is something you should understand about  David Perez. David Perez had a gravitational pull towards power.
-13 
 So when President Jefferson walked into the Oval, the air was  thick. Both monitored their breathing, careful not to let their  powers collide. 
 David lifted his shoulder as he extended a handshake. President  Jefferson was grateful David opted for the shake over the hug. 
 “How can I help you, David?” 
@@ -176,7 +169,6 @@ David composed himself. “You remember the Great Power  Outage?”
 She peered over her glasses. “You mean the one where I had to  learn to heat my house by woodfire, communicate by letter, and  find out through the newspaper that this was happening just about  everywhere in the world?” 
 David allowed a grin to emerge on his face. “Hmm. Can you be a  little more specific?” 
 President Jefferson allowed a chuckle. “When the toilets wouldn’t  flush?”
-14 
 David pointed to her. “That’s the one!” 
 It was finally good to laugh about the Great Power Outage. What  an awful time, though. Summers were horrible, Winters were the  worst. 
 At least a lot of the technology still stuck around from the ‘Pre’  days. 
@@ -187,7 +179,6 @@ The pen didn’t lift from the notebook.
 David shrugged and pulled out a white envelope bordered with a  thin gold line. Harriet took it, feeling its suede-like texture. 
 David spared no expense. 
 He continued, “My client is hearing reports that Russian oil  oligarchs are pushing the Tsar to invade Eastern Europe rather  than settle for unfavorable negotiations. If we leave the FTA, the  door is wide open for them to invade.”
-15 
 “Shit.” She groaned as she opened the envelope. A small packet of  paper, stapled at a perfect 45-degree angle to the corner, provided  the intel. “I wish they’d just learn to negotiate instead of sending  their citizens to death.” 
 David crossed his legs, laid one hand on top of the other, and  placed them on his knees. In this pose, he studied her. 
 “Between you and me, and I’ve given this some thought, it’d be  much easier if Russia’s neighbors just united and defended  themselves instead of relying on our help.” 
@@ -198,7 +189,6 @@ She turned around and went to her desk. She scribbled something  again, then loo
 David sat there, waiting for her to break the silence. She didn’t.  Instead, she allowed a few more moments to sit in her thoughts. 
 “Maybe we can let iron sharpen iron. Think you can unite them in  a single country?” 
 “Who?”
-16 
 “Russia’s neighbors.” 
 “You don’t want to check with the State Department or CIA?” 
 She shook her head. “This can’t be coming from the American  government at all.” 
@@ -213,11 +203,9 @@ President Jefferson shook his hand. She loved the confidence, but  doubted it al
   ];
 
   async function sendEmail() {
-    // Get the email value from the input field
     const emailInput = document.querySelector(".email");
     const userInputEmail = emailInput?.value;
 
-    // Validate that something was entered
     if (!userInputEmail || !userInputEmail.trim()) {
       alert("Please enter an email address in the input field.");
       return;
@@ -230,9 +218,9 @@ President Jefferson shook his hand. She loved the confidence, but  doubted it al
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          to: "ulapkus@gmail.com", // Fixed recipient email
+          to: "ulapkus@gmail.com",
           subject: "New email from website signup",
-          text: `Email submitted: ${userInputEmail}`, // Use the input as the email content
+          text: `Email submitted: ${userInputEmail}`,
         }),
       });
 
@@ -308,12 +296,15 @@ President Jefferson shook his hand. She loved the confidence, but  doubted it al
       </div>
       <div className="amberqueencontainer">
         <Image src={amber} alt="" className="text" />
-        <Image src={queen} alt="" className="text" />
+        <Image src={queen} alt="" className="text text-queen" />
       </div>
       <motion.div className="sky" style={{ y: y1, x: 0, scale }}>
         <Image src={sky} alt="sky" className="sky-inner" />
       </motion.div>
-      <motion.div className="castle" style={{ y: y1, x: 0, scale }}>
+      <motion.div
+        className="castle"
+        style={{ y: y2, x: 0, scale: scaleCastle }}
+      >
         <Image src={castle} alt="castle" className="castle-inner" />
         <Image src={lake} alt="lake" className="lake-stationary-inner" />
       </motion.div>
@@ -323,10 +314,10 @@ President Jefferson shook his hand. She loved the confidence, but  doubted it al
       <motion.div
         className="lake"
         style={{
-          y: y2,
+          y: y3,
           x: 0,
-          scaleX: scale.get(), // Maintain horizontal scaling
-          scaleY: scaleY, // Apply vertical scaling only
+          scaleX: scale.get(),
+          scaleY: scaleY,
         }}
       >
         <Image src={lake} alt="lake" className="lake-inner" />
@@ -370,7 +361,7 @@ President Jefferson shook his hand. She loved the confidence, but  doubted it al
               e.currentTarget.style.transform = "scale(1)";
             }}
             onClick={() => {
-              setCurrentPage(0); // Set to prologue
+              setCurrentPage(0);
               setShowModal(true);
             }}
           >
@@ -393,7 +384,7 @@ President Jefferson shook his hand. She loved the confidence, but  doubted it al
               e.currentTarget.style.transform = "scale(1)";
             }}
             onClick={() => {
-              setCurrentPage(1); // Set to chapter 1
+              setCurrentPage(1);
               setShowModal(true);
             }}
           >
@@ -416,7 +407,7 @@ President Jefferson shook his hand. She loved the confidence, but  doubted it al
               e.currentTarget.style.transform = "scale(1)";
             }}
             onClick={() => {
-              setCurrentPage(2); // Set to chapter 2
+              setCurrentPage(2);
               setShowModal(true);
             }}
           >
