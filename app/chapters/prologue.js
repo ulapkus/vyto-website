@@ -1,5 +1,4 @@
-export const prologue = [
-  `Golden sap wept from a pine and entombed a bee as ancient as Mount Everest. Millions of years later, the amber gem became the prized possession of Jūratė, the mermaid queen of the Baltic Sea. The entombed bee bobbed along with the current, the morning sun casting its light through the waves, illuminating the amber's golden glow.
+export const prologue = `Golden sap wept from a pine and entombed a bee as ancient as Mount Everest. Millions of years later, the amber gem became the prized possession of Jūratė, the mermaid queen of the Baltic Sea. The entombed bee bobbed along with the current, the morning sun casting its light through the waves, illuminating the amber's golden glow.
 Jūratė stared into its tiny, ancient eyes. In silence, they spoke: The Amber Bee chooses the Amber Queen.
 What a fate—to rule over every fish, turtle, seagrass, and oyster in the sea, only to be ruled by a dead bee.
 Golden sap wept And yet, she wanted this fate with every fiber of her being. She couldn't trust anyone else with this duty. No one else understood the threads that bound everything together the way she did. 
@@ -15,29 +14,26 @@ She plunged back into the waves, sending ripples through the water.
 
     The two were suspended in the water. The fisherman stared, wide- eyed—clearly, he had never seen a mermaid before.
 
-Jūratė was surprised too. What could she say? He was handsome. His long hair flowed through the water. His eyes were a piercing green, unlike anything Jūratė had ever seen. The two swam up to the surface and continued to stare each other in the eye. Jūratė began to giggle, and the person followed suit.,
+Jūratė was surprised too. What could she say? He was handsome. His long hair flowed through the water. His eyes were a piercing green, unlike anything Jūratė had ever seen. The two swam up to the surface and continued to stare each other in the eye. Jūratė began to giggle, and the person followed suit.
     The giggling slowed, and Jūratė introduced herself. She pulled her hand towards her heart.
-“Jūratė.” You – Rah - Teh
+"Jūratė." You – Rah - Teh
 The man had never heard a voice so beautiful. He blushed.
-“Kastytis.” Kuss – Tee - Tiss
+"Kastytis." Kuss – Tee - Tiss
     Just then, a sound of thunder rumbled overhead. To Kastytis, this meant he had to get his raft back to safety on the shore.
-For Jūratė, it meant something completely different. It was a warning from her father: ‘Don’t be with this person.’
+For Jūratė, it meant something completely different. It was a warning from her father: 'Don't be with this person.'
 As quickly as she could, Jūratė helped Kastytis back into the raft. Then, she dove beneath the surface, stewing in silence, her thoughts turning against her father.
 What the hell is wrong with finding a man handsome?
 So when the rumbling eventually stopped and the moon had come up, Jūratė went looking for Kastytis.
-She began to call out. “Kastyti! Kastyti!”
-
-    Nothing.
-Again, Jūratė shouted, her voice rising. “Kastyti! Kastyti!”
+She began to call out. "Kastyti! Kastyti!"
+Nothing.
+Again, Jūratė shouted, her voice rising. "Kastyti! Kastyti!"
 Instead of a response from Kastytis, Jūratė saw a lightning bolt crash into the sea. The wrong being had heard the shouting.
 Jūratė swiftly dove back beneath the waves and began swimming towards her castle. Ahead, a vast blackness loomed in the sea.
 As she approached, she bumped into rocks and boulders, disoriented by the shadow. She wondered if the darkness of the night had played tricks on her eyes.
 She made it to the blackness and reached out her hand.
 Could he really have done it?!
-It was her castle, directly struck by Perkūnas’ lightning bolt. The castle began breaking apart into the expanse of the sea.
+It was her castle, directly struck by Perkūnas' lightning bolt. The castle began breaking apart into the expanse of the sea.
 Jūratė shrieked. The fish darted away.
-Jūratė raced up to the surface, feeling the rain on her skin. She looked to the heavens and screamed. “I will get my castle back. Whether in this life, the next, or however many generations it will
-take!”
-Jūratė took a breath, held the Amber Bee, and promised. “Čia pranešimas.” This is prophecy.
-`,
-];
+Jūratė raced up to the surface, feeling the rain on her skin. She looked to the heavens and screamed. "I will get my castle back. Whether in this life, the next, or however many generations it will take!"
+Jūratė took a breath, held the Amber Bee, and promised. "Čia pranešyste." 
+This is prophecy.`;

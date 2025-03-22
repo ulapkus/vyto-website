@@ -116,6 +116,20 @@ body {
   height: 100%;
   z-index: 30;
 }
+.chapter-text {
+  padding: 0;
+  margin: 0;
+  font-style: italic;
+}
+
+.break {
+  height: 1vh;
+}
+
+.chapter-paragraph {
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
 
 .text {
   height: 9vw;
@@ -242,9 +256,21 @@ body {
   font-weight: bold;
 }
 
+.yiddish {
+  padding-right: 12vw;
+  padding-left: 12vw;
+}
+
+.yiddish-translation {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
 .prologue-text {
   font-size: 30px;
   text-align: center;
+  padding-bottom: 2vh;
 }
 
 .sign-up-button {
