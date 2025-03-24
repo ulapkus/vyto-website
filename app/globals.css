@@ -6,11 +6,12 @@
   width: 100vw;
   height: 100vh;
 }
+
 .arrow-container {
   position: relative;
-  top: 400px;
-  width: 40px;
-  height: 100px;
+  top: 550px;
+  width: 10px;
+  height: 10px;
 }
 
 .arrow {
@@ -44,6 +45,7 @@ body {
   margin: 0;
   overflow-x: hidden;
   overscroll-behavior: none;
+  background-color: black;
 }
 
 .text-one {
@@ -51,11 +53,51 @@ body {
   color: white;
 }
 
+.text-two {
+  font-size: 20px;
+  color: white;
+  padding-bottom: 1vh;
+  margin: 0;
+}
+
+.text-two-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 2vh;
+}
+
 .sky {
+  /* position: relative;
+  top: 0;
+  right: 100px; */
   width: 100vw;
   height: 100vh;
   z-index: 2;
   /* border: 100px solid red; */
+}
+
+.mist {
+  display: flex;
+  justify-content: end;
+  object-fit: fit;
+  position: absolute;
+  top: 700px;
+  left: 0;
+  width: 50vw;
+  height: 50vh;
+  z-index: 3;
+  opacity: 0.2;
+}
+
+.mist-inner {
+  position: absolute;
+  bottom: 300px;
+  right: 100px;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
 }
 
 .sky-inner {
@@ -72,12 +114,11 @@ body {
 .castle {
   object-fit: contain;
   position: relative;
-  bottom: 1000px;
+  bottom: 450px;
   left: 0;
   width: 100vw;
   height: 100vh;
   z-index: 5;
-  border: 1px solid red;
 }
 
 .castle-inner {
@@ -85,7 +126,6 @@ body {
   width: 100%;
   height: 100%;
   z-index: 5;
-  border: 1px solid blue;
 }
 
 .lake-stationary-inner {
@@ -131,8 +171,13 @@ body {
   padding-bottom: 1vh;
 }
 
+.yiddish-paragraph {
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+
 .text {
-  height: 9vw;
+  height: 8vw;
   object-fit: contain;
   padding: 0;
   margin: 0;
@@ -169,6 +214,16 @@ body {
   /* border: 10px solid yellow; */
 }
 
+.europemap {
+  object-fit: contain;
+  margin-top: 4vh;
+  margin-bottom: 3vh;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  border: 2px solid black;
+}
+
 .lake-inner {
   object-fit: contain;
   width: 100%;
@@ -190,7 +245,7 @@ body {
 
 .underwater-inner {
   z-index: 15;
-  object-fit: cover;
+  object-fit: scale-down;
   width: 100%;
   height: 100%;
 }
@@ -202,7 +257,7 @@ body {
   flex-direction: column;
   align-items: center;
   position: absolute;
-  bottom: 330px;
+  bottom: 380px;
   z-index: 6;
   height: 50%;
   width: 100%;
@@ -211,7 +266,7 @@ body {
 .underwater-text {
   font-size: 30px;
   color: white;
-  margin-bottom: 2vh;
+  margin-bottom: 1vh;
 }
 
 .underwater-image-container {
@@ -234,13 +289,17 @@ body {
   height: 20vh;
 }
 
+input {
+  text-decoration: none;
+}
+
 .email-input {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 2vh;
-  width: 40vw;
+  width: 30vw;
 }
 
 .email {
@@ -251,14 +310,21 @@ body {
   border: none;
 }
 
+.email:focus {
+  outline: none;
+  /* If you want a different style when focused, you can add it here, like: */
+  /* border: 1px solid #your-color; */
+}
+
 .sign-up {
   font-size: 15px;
   font-weight: bold;
 }
 
 .yiddish {
-  padding-right: 12vw;
-  padding-left: 12vw;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 .yiddish-translation {
@@ -281,6 +347,16 @@ body {
   border-radius: 10px;
   padding-left: 10px;
   border: none;
+  transition: transform 0.1s;
+}
+
+.sign-up-button:active {
+  transform: scale(0.95);
+  opacity: 0.8;
+}
+
+.sign-up-button:hover {
+  cursor: pointer;
 }
 
 .modal-overlay {
@@ -355,16 +431,6 @@ body {
   background-color: #fcf9f2; /* Slightly off-white, paper-like color */
 }
 
-.sign-up-button:hover {
-  background-color: #000;
-  color: #fff;
-  width: 100%;
-  height: 5vh;
-  border-radius: 10px;
-  padding-left: 10px;
-  border: none;
-}
-
 .book-content {
   width: 80%;
   padding: 0 10px 0 10px;
@@ -385,4 +451,45 @@ body {
   background-color: black;
   position: relative;
   bottom: 1400px;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: black;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.banner {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px 30px;
+  border-radius: 5px;
+  z-index: 1000;
+  animation: slideDown 0.5s ease;
+  color: white;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.09);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1.9px);
+  -webkit-backdrop-filter: blur(1.9px);
+}
+
+@keyframes slideDown {
+  from {
+    top: -100px;
+    opacity: 0;
+  }
+  to {
+    top: 20px;
+    opacity: 1;
+  }
 }

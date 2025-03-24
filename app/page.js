@@ -9,9 +9,9 @@ import three from "../public/image3.png";
 import twoagain from "../public/image2again.png";
 import threeagain from "../public/image3again.png";
 import Parralax from "./components/parralax";
-import { prologue } from "./chapters/prologue";
+import Prologue from "./chapters/prologue";
 import Chapterone from "./chapters/chapterone";
-import { chaptertwo } from "./chapters/chaptertwo";
+import Chaptertwo from "./chapters/chaptertwo";
 
 export default function Landscape() {
   const [imageSrcOne, setImageSrcOne] = useState(one);
@@ -19,6 +19,7 @@ export default function Landscape() {
   const [imageSrcThree, setImageSrcThree] = useState(threeagain);
   const [showModal, setShowModal] = useState(false);
   const [currentPage, setCurrentPage] = useState(0);
+  const [showTooltip, setShowTooltip] = useState(false);
 
   useEffect(() => {
     if (showModal) {
@@ -33,14 +34,6 @@ export default function Landscape() {
 
   const BookPreviewModal = () => {
     if (!showModal) return null;
-    let pageTitle;
-    if (currentPage === 0) {
-      pageTitle = "Prologue";
-    } else if (currentPage === 1) {
-      pageTitle = "Chapter 1";
-    } else {
-      pageTitle = "Chapter 2";
-    }
 
     return (
       <div className="modal-overlay" onClick={() => setShowModal(false)}>
@@ -55,14 +48,21 @@ export default function Landscape() {
           </div>
           <div className="modal-body">
             <div className="book-content">
-              {/* <div className="prologue-text">{pageTitle}</div> */}
-              <Chapterone />
+              {currentPage === 0 && <Prologue />}
+              {currentPage === 1 && <Chapterone />}
+              {currentPage === 2 && <Chaptertwo />}
             </div>
           </div>
           <div className="modal-footer"></div>
         </div>
       </div>
     );
+  };
+
+  const copyToClipboard = async () => {
+    await navigator.clipboard.writeText("vytauk@gmail.com");
+    setShowTooltip(true);
+    setTimeout(() => setShowTooltip(false), 2000); // Hide after 2 seconds
   };
 
   return (
@@ -139,6 +139,21 @@ export default function Landscape() {
             <Image className="underwater-image" alt="" src={imageSrcOne} />
             <p className="text-one">Chapter 2</p>
           </div>
+        </div>
+        <div className="text-two-container">
+          <p className="text-two">
+            Get in touch with the novel&apos;s author, Vytas Aukstuolis.
+          </p>
+          <p
+            className="text-two"
+            onClick={copyToClipboard}
+            style={{ cursor: "pointer", position: "relative" }}
+          >
+            vytauk@gmail.com
+            {showTooltip && (
+              <span className="tooltip">Copied to clipboard!</span>
+            )}
+          </p>
         </div>
       </div>
     </div>
