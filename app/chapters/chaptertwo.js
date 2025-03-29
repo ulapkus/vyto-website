@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Chaptertwo() {
   return (
-    <div>
+    <div className="chapter-text">
       <p className="prologue-text">Chapter Two</p>
       <p>
         {`President Jefferson set the phone down. Her knees buckled. Atlas, it

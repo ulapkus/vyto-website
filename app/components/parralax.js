@@ -53,6 +53,8 @@ export default function Parralax() {
       >
         <Image src={amber} alt="" className="text" />
         <Image src={queen} alt="" className="text text-queen" />
+        <div className="novel-by">A NOVEL BY VYTAS</div>
+        {/* <div className="novel-by">a novel by Vytas</div> */}
       </motion.div>
       <motion.div className="sky" style={{ y: y1, x: 0, scale }}>
         <Image src={sky} alt="" className="sky-inner" />
@@ -89,7 +91,9 @@ export default function Parralax() {
       >
         <Image src={underwater} alt="underwater" className="underwater-inner" />
         <div className="underwater-text-container">
-          <div className="underwater-text">Keep me posted</div>
+          <div className="underwater-text">
+            Stay posted on the book’s release
+          </div>
           <form
             ref={formRef}
             onSubmit={handleSubmit}
@@ -104,12 +108,12 @@ export default function Parralax() {
               required
             />
             <button className="sign-up-button" type="submit">
-              SEND
+              SUBSCRIBE
             </button>
           </form>
-          <div className="arrow-container">
+          {/* <div className="arrow-container">
             <div className="arrow"></div>
-          </div>
+          </div> */}
         </div>
       </motion.div>
     </>

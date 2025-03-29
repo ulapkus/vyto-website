@@ -1,6 +1,6 @@
 export default function Prologue() {
   return (
-    <div>
+    <div className="chapter-text">
       <p className="prologue-text">Prologue</p>
       <p>
         {`Golden sap wept from a pine and entombed a bee as ancient as Mount
@@ -11,7 +11,7 @@ export default function Prologue() {
       </p>
       <p>
         {`Jūratė stared into its tiny, ancient eyes. In silence, they spoke: `}
-        {`<i>The Amber Bee chooses the Amber Queen.</i>`}
+        <i>{`The Amber Bee chooses the Amber Queen.`}</i>
       </p>
       <p>
         {`What a fate—to rule over every fish, turtle, seagrass, and oyster in the
@@ -85,12 +85,12 @@ export default function Prologue() {
       </p>
       <p>
         {`"Jūratė."`}
-        <i>{`You – Rah - Teh`}</i>
+        <i className="italics">{`You – Rah - Teh`}</i>
       </p>
       <p>{`The man had never heard a voice so beautiful. He blushed.`}</p>
       <p>
         {`"Kastytis."`}
-        <i>{`Kuss – Tee - Tiss`}</i>
+        <i className="italics">{`Kuss – Tee - Tiss`}</i>
       </p>
       <p>
         {`Just then, a sound of thunder rumbled overhead. To Kastytis, this meant
@@ -136,7 +136,7 @@ export default function Prologue() {
       <p>
         {`Jūratė raced up to the surface, feeling the rain on her skin. She looked
         to the heavens and screamed.`}
-        <i>{`"I will get my castle back. Whether in this
+        <i className="italics">{`"I will get my castle back. Whether in this
         life, the next, or however many generations it will take!"`}</i>
       </p>
       <p>
@@ -144,7 +144,7 @@ export default function Prologue() {
         pranešyste."`}
       </p>
       <p>
-        <i>{`This is prophecy.`}</i>
+        <i className="italics">{`This is prophecy.`}</i>
       </p>
     </div>
   );

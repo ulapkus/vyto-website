@@ -1,6 +1,6 @@
 export default function Chapterone() {
   return (
-    <div>
+    <div className="chapter-text">
       <p className="prologue-text">Chapter One</p>
       <p>
         {`Eleven thousand nine hundred thirty-nine years had passed since the
@@ -77,105 +77,105 @@ export default function Chapterone() {
       <p>
         {`A steady beat pulsated through the house. As if marching towards war,
         the voices began to sing 'Zog nit keyn mol'.`}
-        <i>{`'Never Say'`}</i>
+        <i className="italics">{`'Never Say'`}</i>
       </p>
 
       <p>{`The séance began.`}</p>
 
       <p>
-        <i>{`Translation from Yiddish below.`}</i>
+        <i className="italics">{`Translation from Yiddish below.`}</i>
       </p>
       <div className="yiddish">
         <div className="yiddish-paragraph">
-          <p className="chapter-text">{`,זאָ ג ניט קיין מאָ ל, אַ ז דו גייסט דעם לעצטן וועג`}</p>
-          <p className="chapter-text">{`.כאָ טש הימלען בלײַ ענע פֿאַ רשטעלן בלויע טעג`}</p>
-          <p className="chapter-text">{`- קומען וועט נאָ ך אונדזער אויסגעבענקטע שעה`}</p>
-          <p className="chapter-text">{`!ס׳וועט אַ פּויק טאָ ן אונדזער טראָ ט: מיר זײַ נען דאָ`}</p>
+          <p className="yiddish-text">{`,זאָ ג ניט קיין מאָ ל, אַ ז דו גייסט דעם לעצטן וועג`}</p>
+          <p className="yiddish-text">{`.כאָ טש הימלען בלײַ ענע פֿאַ רשטעלן בלויע טעג`}</p>
+          <p className="yiddish-text">{`- קומען וועט נאָ ך אונדזער אויסגעבענקטע שעה`}</p>
+          <p className="yiddish-text">{`!ס׳וועט אַ פּויק טאָ ן אונדזער טראָ ט: מיר זײַ נען דאָ`}</p>
         </div>
         <div className="yiddish-paragraph">
-          <p className="chapter-text">{`,פֿון גרינעם פּאַ למענלאַ נד ביז ווײַ סן לאַ נד פֿון שניי`}</p>
-          <p className="chapter-text">{`,מיר קומען אָ ן מיט אונדזער פּײַ ן, מיט אונדזער וויי`}</p>
-          <p className="chapter-text">{`,און וווּ געפֿאַ לן ס׳איז אַ שפּריץ פֿון אונדזער בלוט`}</p>
-          <p className="chapter-text">{`!שפּראָ צן וועט דאָ רט אונדזער גבֿורה, אונדזער מוט`}</p>
+          <p className="yiddish-text">{`,פֿון גרינעם פּאַ למענלאַ נד ביז ווײַ סן לאַ נד פֿון שניי`}</p>
+          <p className="yiddish-text">{`,מיר קומען אָ ן מיט אונדזער פּײַ ן, מיט אונדזער וויי`}</p>
+          <p className="yiddish-text">{`,און וווּ געפֿאַ לן ס׳איז אַ שפּריץ פֿון אונדזער בלוט`}</p>
+          <p className="yiddish-text">{`!שפּראָ צן וועט דאָ רט אונדזער גבֿורה, אונדזער מוט`}</p>
         </div>
         <div className="yiddish-paragraph">
-          <p className="chapter-text">{`,ס׳וועט די מאָ רגנזון באַ גילדן אונדז דעם הײַ נט`}</p>
-          <p className="chapter-text">{`,און דער נעכטן וועט פֿאַ רשווינדן מיט דעם פֿײַ נט`}</p>
-          <p className="chapter-text">{`- נאָ ר אויב פֿאַ רזאַ מען וועט די זון אין דעם קאַ יאָ ר`}</p>
-          <p className="chapter-text">{`.ווי אַ פּאַ ראָ ל זאָ ל גיין דאָ ס ליד פֿון דור צו דור`}</p>
+          <p className="yiddish-text">{`,ס׳וועט די מאָ רגנזון באַ גילדן אונדז דעם הײַ נט`}</p>
+          <p className="yiddish-text">{`,און דער נעכטן וועט פֿאַ רשווינדן מיט דעם פֿײַ נט`}</p>
+          <p className="yiddish-text">{`- נאָ ר אויב פֿאַ רזאַ מען וועט די זון אין דעם קאַ יאָ ר`}</p>
+          <p className="yiddish-text">{`.ווי אַ פּאַ ראָ ל זאָ ל גיין דאָ ס ליד פֿון דור צו דור`}</p>
         </div>
         <div className="yiddish-paragraph">
-          <p className="chapter-text">{`,דאָ ס ליד געשריבן איז מיט בלוט, און ניט מיט בלײַ`}</p>
-          <p className="chapter-text">{`,ס׳איז ניט קיין לידל פֿון אַ פֿויגל אויף דער פֿרײַ`}</p>
-          <p className="chapter-text">{`דאָ ס האָ ט אַ פֿאָ לק צווישן פֿאַ לנדיקע ווענט`}</p>
-          <p className="chapter-text">{`.דאָ ס ליד געזונגען מיט נאַ גאַ נעס אין די הענט`}</p>
+          <p className="yiddish-text">{`,דאָ ס ליד געשריבן איז מיט בלוט, און ניט מיט בלײַ`}</p>
+          <p className="yiddish-text">{`,ס׳איז ניט קיין לידל פֿון אַ פֿויגל אויף דער פֿרײַ`}</p>
+          <p className="yiddish-text">{`דאָ ס האָ ט אַ פֿאָ לק צווישן פֿאַ לנדיקע ווענט`}</p>
+          <p className="yiddish-text">{`.דאָ ס ליד געזונגען מיט נאַ גאַ נעס אין די הענט`}</p>
         </div>
         <div className="yiddish-paragraph">
-          <p className="chapter-text">{`,טאָ זאָ ג ניט קיין מאָ ל, אַ ז דו גייסט דעם לעצטן וועג`}</p>
-          <p className="chapter-text">{`.כאָ טש הימלען בלײַ ענע פֿאַ רשטעלן בלויע טעג`}</p>
-          <p className="chapter-text">{`- קומען וועט נאָ ך אונדזער אויסגעבענקטע שעה`}</p>
-          <p className="chapter-text">{`!ס׳וועט אַ פּויק טאָ ן אונדזער טראָ ט: מיר זײַ נען דאָ`}</p>
+          <p className="yiddish-text">{`,טאָ זאָ ג ניט קיין מאָ ל, אַ ז דו גייסט דעם לעצטן וועג`}</p>
+          <p className="yiddish-text">{`.כאָ טש הימלען בלײַ ענע פֿאַ רשטעלן בלויע טעג`}</p>
+          <p className="yiddish-text">{`- קומען וועט נאָ ך אונדזער אויסגעבענקטע שעה`}</p>
+          <p className="yiddish-text">{`!ס׳וועט אַ פּויק טאָ ן אונדזער טראָ ט: מיר זײַ נען דאָ`}</p>
         </div>
       </div>
       <div className="break"></div>
       <div className="yiddish-translation">
         <div className="chapter-paragraph">
-          <p className="chapter-text">
+          <p className="yiddish-text">
             {`Never say that you're going your last way`}
           </p>
-          <p className="chapter-text">
+          <p className="yiddish-text">
             {`Although the skies filled with lead cover blue days`}
           </p>
-          <p className="chapter-text">{`Our promised hour will soon come`}</p>
-          <p className="chapter-text">
+          <p className="yiddish-text">{`Our promised hour will soon come`}</p>
+          <p className="yiddish-text">
             {`Our marching steps ring out: 'We are here!'`}
           </p>
         </div>
         <div className="chapter-paragraph">
-          <p className="chapter-text">
+          <p className="yiddish-text">
             {`From green lands of palm to lands with white snow`}
           </p>
-          <p className="chapter-text">{`We come with our pain and our woes`}</p>
-          <p className="chapter-text">
+          <p className="yiddish-text">{`We come with our pain and our woes`}</p>
+          <p className="yiddish-text">
             {`And from where a spurt of our blood falls`}
           </p>
-          <p className="chapter-text">
+          <p className="yiddish-text">
             {`Will sprout our strength and our courage`}
           </p>
         </div>
         <div className="chapter-paragraph">
-          <p className="chapter-text">
+          <p className="yiddish-text">
             {`Today the morning sun will accompany us`}
           </p>
-          <p className="chapter-text">
+          <p className="yiddish-text">
             {`And the night will fade away with the enemy`}
           </p>
-          <p className="chapter-text">{`But if the sun waits to rise`}</p>
-          <p className="chapter-text">
+          <p className="yiddish-text">{`But if the sun waits to rise`}</p>
+          <p className="yiddish-text">
             {`Like a password this song will go from generation to generation`}
           </p>
         </div>
         <div className="chapter-paragraph">
-          <p className="chapter-text">
+          <p className="yiddish-text">
             {`This song is written with blood and not with [pencil] lead`}
           </p>
-          <p className="chapter-text">
+          <p className="yiddish-text">
             {`It's not a tune sung by birds in the wild`}
           </p>
-          <p className="chapter-text">
+          <p className="yiddish-text">
             {`This song was sung by people amidst collapsing walls`}
           </p>
-          <p className="chapter-text"> {`Sung with pistols in their hands`}</p>
+          <p className="yiddish-text"> {`Sung with pistols in their hands`}</p>
         </div>
         <div className="chapter-paragraph">
-          <p className="chapter-text">
+          <p className="yiddish-text">
             {`So never say that you're going your last way`}
           </p>
-          <p className="chapter-text">
+          <p className="yiddish-text">
             {`Although the skies filled with lead cover blue days`}
           </p>
-          <p className="chapter-text"> {`Our promised hour will soon come`}</p>
-          <p className="chapter-text">
+          <p className="yiddish-text"> {`Our promised hour will soon come`}</p>
+          <p className="yiddish-text">
             {`Our marching steps ring out: 'We are here'!`}
           </p>
         </div>
@@ -230,11 +230,11 @@ export default function Chapterone() {
 
       <p>
         {`Jūratė hugged his chest, kissing him on the back of the head.`}
-        <i>{`"Ticklish?"`}</i>
+        <i className="italics">{`"Ticklish?"`}</i>
       </p>
 
       <p>
-        {`Kastytis kept his shoulder to his ear.`} <i>{`"Barely."`}</i>
+        {`Kastytis kept his shoulder to his ear.`} <i className="italics">{`"Barely."`}</i>
       </p>
 
       <p>
@@ -245,18 +245,18 @@ export default function Chapterone() {
 
       <p>{`Instead, Kastytis brought up more pressing matters.`}</p>
       <p>
-        <i>{`"I caught a catfish. We're gonna eat good tonight."`}</i>
+        <i className="italics">{`"I caught a catfish. We're gonna eat good tonight."`}</i>
       </p>
       <p>{`She couldn't change the subject now – she was hooked.`}</p>
       <p>
-        <i>{`"You cooking it with lemon and thyme?"`}</i>
+        <i className="italics">{`"You cooking it with lemon and thyme?"`}</i>
       </p>
 
       <p>{`Jūratė could practically hear the smile come from his face.`}</p>
 
       <p>
         {`"Rūkyta."`}
-        <i>
+        <i className="italics">
           {`Smoked, baby. This is gonna be the best Goddamned fish you've ever had
           in your life.`}
         </i>

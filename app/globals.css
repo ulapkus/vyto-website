@@ -1,3 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+@font-face {
+  font-family: "Calibri Light";
+  src: url("/public/calibril.woff") format("woff");
+  /* font-weight: 300;
+  font-style: normal; */
+}
+
 * {
   box-sizing: border-box;
 }
@@ -5,6 +15,10 @@
 .container {
   width: 100vw;
   height: 100vh;
+}
+
+.italics {
+  font-family: "Calibri Light";
 }
 
 .arrow-container {
@@ -114,7 +128,7 @@ body {
 .castle {
   object-fit: contain;
   position: relative;
-  bottom: 450px;
+  bottom: 50vh;
   left: 0;
   width: 100vw;
   height: 100vh;
@@ -156,7 +170,11 @@ body {
   height: 100%;
   z-index: 30;
 }
+
 .chapter-text {
+  font-family: "EB Garamond", serif;
+}
+.yiddish-text {
   padding: 0;
   margin: 0;
   font-style: italic;
@@ -177,16 +195,27 @@ body {
 }
 
 .text {
-  height: 8vw;
-  object-fit: contain;
+  height: 10vh;
+  width: 40%;
+  object-fit: scale-down;
   padding: 0;
   margin: 0;
 }
 
 .text-queen {
-  position: relative;
-  bottom: 30px;
-  right: 10px;
+  /* position: relative;
+  bottom: 2vh;
+  right: 1vh; */
+  margin-bottom: -0.5vh;
+  margin-top: -2.5vh;
+  margin-right: 1.5vh;
+}
+
+.novel-by {
+  color: #fae8c0;
+  font-size: 15px;
+  z-index: 100;
+  letter-spacing: 0.2vw;
 }
 
 .amberqueencontainer {
@@ -197,10 +226,11 @@ body {
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 6vh;
+  top: 9vh;
   z-index: 4;
   padding: 0;
   margin: 0;
+  border: 1px solid red;
 }
 
 .lake {
@@ -235,12 +265,14 @@ body {
   /* object-fit: contain; */
   object-fit: cover;
   position: relative;
-  bottom: 900px;
+  /* bottom: 900px; */
+  bottom: 100vh;
   left: 0;
   width: 100vw;
   height: 150vh;
   padding: 0;
   margin: 0;
+  border: 1px solid blue;
 }
 
 .underwater-inner {
@@ -257,10 +289,12 @@ body {
   flex-direction: column;
   align-items: center;
   position: absolute;
-  bottom: 380px;
+  /* bottom: 380px; */
+  bottom: 50vh;
   z-index: 6;
   height: 50%;
   width: 100%;
+  border: 1px solid red;
 }
 
 .underwater-text {
@@ -348,6 +382,7 @@ input {
   padding-left: 10px;
   border: none;
   transition: transform 0.1s;
+  font-size: 2vh;
 }
 
 .sign-up-button:active {
@@ -375,7 +410,7 @@ input {
 }
 
 .modal-content {
-  background-color: #fff;
+  background-color: #e6e6e6;
   border-radius: 8px;
   max-width: 800px;
   overflow-y: auto;
