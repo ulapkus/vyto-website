@@ -33,8 +33,8 @@ export default function Parralax() {
         dragConstraints={{ left: 0, right: 0 }}
         dragElastic={0.1}
       >
-        <Image src={amber} alt="" className="text" />
-        <Image src={queen} alt="" className="text text-queen" />
+        <Image src={amber} alt="" className="text" priority="true" />
+        <Image src={queen} alt="" className="text text-queen" priority="true" />
         <div className="novel-by">A NOVEL BY VYTAS</div>
         {/* <div className="novel-by">a novel by Vytas</div> */}
       </motion.div>
@@ -43,6 +43,7 @@ export default function Parralax() {
         style={{ y: y1, x: 0, scale }}
         dragConstraints={{ left: 0, right: 0 }}
         dragElastic={0.1}
+        priority="true"
       >
         <Image src={sky} alt="" className="sky-inner" />
       </motion.div>
@@ -51,9 +52,11 @@ export default function Parralax() {
         style={{ y: y2, x: 0, scale: scaleCastle }}
         dragConstraints={{ left: 0, right: 0 }}
         dragElastic={0.1}
+        priority="true"
       >
         <Image src={castle} alt="" className="castle-inner" />
       </motion.div>
+      <Subscribe />
       <motion.div
         dragConstraints={{ left: 0, right: 0 }}
         dragElastic={0.1}
@@ -70,10 +73,12 @@ export default function Parralax() {
       >
         <Image src={fogOne} alt="" className="fogone-inner" />
       </motion.div>
+
       <motion.div
         dragConstraints={{ left: 0, right: 0 }}
         dragElastic={0.1}
         className="lake"
+        priority="true"
         style={{
           y: y3,
           x: 0,
@@ -93,7 +98,6 @@ export default function Parralax() {
         }}
       >
         <Image src={underwater} alt="underwater" className="underwater-inner" />
-        <Subscribe />
         <BookIcons />
         {/* <Footer /> */}
       </motion.div>

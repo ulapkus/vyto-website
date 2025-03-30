@@ -9,6 +9,20 @@ export default function Subscribe() {
     "https://script.google.com/macros/s/AKfycbz01wL3Utoy9q86scYMmXCDU8EES-zk9mc2IMslrJBB85S7jxF5Y1dqP-QIy2b3WzOWxw/exec";
 
   useEffect(() => {
+    // Handle scroll lock when modal is shown
+    if (showModal) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    // Cleanup function to restore scrolling when component unmounts
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [showModal]);
+
+  useEffect(() => {
     // Function to check if element is in viewport
     const isElementInViewport = (el) => {
       const rect = el.getBoundingClientRect();
@@ -60,13 +74,16 @@ export default function Subscribe() {
       <div className="modal-content-subscribe">
         {/* {showBanner && <div className="banner">Email sent!</div>} */}
         <div className="modal-header-subscribe">
-          <button className="close-button" onClick={() => setShowModal(false)}>
+          <button
+            className="close-button-subscribe"
+            onClick={() => setShowModal(false)}
+          >
             ×
           </button>
         </div>
         <div className="modal-body-subscribe">
           <div className="subscribe-text">
-            Stay posted on the book’s release
+            Stay posted on the book&apos;s release
           </div>
           <form
             ref={formRef}
