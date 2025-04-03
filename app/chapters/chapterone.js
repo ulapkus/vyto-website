@@ -1,7 +1,16 @@
+import Image from "next/image";
+import chapterOneImage from "../../public/bookimages/chapter1.png";
 export default function Chapterone() {
   return (
     <div className="chapter-text">
-      <p className="prologue-text">Chapter One</p>
+      <p className="title">Chapter One</p>
+      <div className="chapter-one-img-container">
+        <Image
+          src={chapterOneImage}
+          alt="Chapter One"
+          className="chapter-one-img"
+        />
+      </div>
       <p>
         {`Eleven thousand nine hundred thirty-nine years had passed since the
         destruction of the Castle of the Sea. The day was warm— unusually warm
@@ -234,7 +243,8 @@ export default function Chapterone() {
       </p>
 
       <p>
-        {`Kastytis kept his shoulder to his ear.`} <i className="italics">{`"Barely."`}</i>
+        {`Kastytis kept his shoulder to his ear.`}{" "}
+        <i className="italics">{`"Barely."`}</i>
       </p>
 
       <p>

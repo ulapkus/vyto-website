@@ -70,7 +70,10 @@ export default function Subscribe() {
     }
   };
   return (
-    <div className="modal-overlay-subscribe">
+    <div
+      className="modal-overlay-subscribe"
+      onClick={() => setShowModal(false)}
+    >
       <div className="modal-content-subscribe">
         {/* {showBanner && <div className="banner">Email sent!</div>} */}
         <div className="modal-header-subscribe">

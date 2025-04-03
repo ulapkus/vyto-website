@@ -1,10 +1,14 @@
-import europemap from "../../public/europemap.png";
+import europemap from "../../public/bookimages/europemap.png";
 import Image from "next/image";
+import chapterTwoImage from "../../public/bookimages/chapter2.png";
 
 export default function Chaptertwo() {
   return (
     <div className="chapter-text">
-      <p className="prologue-text">Chapter Two</p>
+      <p className="title">Chapter Two</p>
+      <div className="chapter-one-img-container">
+        <Image src={chapterTwoImage} alt="" className="chapter-one-img" />
+      </div>
       <p>
         {`President Jefferson set the phone down. Her knees buckled. Atlas, it
         appeared, set more weight on her shoulders.`}

@@ -1,15 +1,13 @@
 "use client";
 import Image from "next/image";
 import { useTransform, useScroll, motion } from "framer-motion";
-import sky from "../../public/skyv3.png";
-import castle from "../../public/Castleandlake.png";
-import lake from "../../public/waterv3.png";
-import amber from "../../public/amberv3.png";
-import queen from "../../public/queenv3.png";
-import fogOne from "../../public/fogUpdated.png";
-import underwater from "../../public/underwater.png";
-// import underwater from "../../public/underwateragain.png";
-import Footer from "./footer";
+import sky from "../../public/parralax/skyv3.png";
+import castle from "../../public/parralax/Castleandlake.png";
+import lake from "../../public/parralax/waterv3.png";
+import amber from "../../public/parralax/amberv3.png";
+import queen from "../../public/parralax/queenv3.png";
+import fogOne from "../../public/parralax/fogUpdated.png";
+import underwater from "../../public/parralax/underwater.png";
 import BookIcons from "./bookIcons";
 import Subscribe from "./subscribe";
 

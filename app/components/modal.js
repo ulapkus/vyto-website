@@ -1,13 +1,9 @@
-export default function Modal() {
+import Prologue from "../chapters/prologue";
+import Chapterone from "../chapters/chapterone";
+import Chaptertwo from "../chapters/chaptertwo";
+
+export default function Modal({ showModal, setShowModal }) {
   if (!showModal) return null;
-  let pageTitle;
-  if (currentPage === 0) {
-    pageTitle = "Prologue";
-  } else if (currentPage === 1) {
-    pageTitle = "Chapter 1";
-  } else {
-    pageTitle = "Chapter 2";
-  }
 
   return (
     <div className="modal-overlay" onClick={() => setShowModal(false)}>
@@ -19,10 +15,15 @@ export default function Modal() {
         </div>
         <div className="modal-body">
           <div className="book-content">
-            <div className="prologue-text">{pageTitle}</div>
-            {bookPages[currentPage].split("\n").map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
-            ))}
+            <div className="chapter-section">
+              <Prologue />
+            </div>
+            <div className="chapter-section">
+              <Chapterone />
+            </div>
+            <div className="chapter-section">
+              <Chaptertwo />
+            </div>
           </div>
         </div>
         <div className="modal-footer"></div>

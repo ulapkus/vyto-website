@@ -1,7 +1,12 @@
+import Image from "next/image";
+import prologueImage from "../../public/bookimages/prologue2.png";
 export default function Prologue() {
   return (
     <div className="chapter-text">
-      <p className="prologue-text">Prologue</p>
+      <p className="title">Prologue</p>
+      <div className="prologue-img-container">
+        <Image src={prologueImage} alt="Prologue" className="prologue-img" />
+      </div>
       <p>
         {`Golden sap wept from a pine and entombed a bee as ancient as Mount
         Everest. Millions of years later, the amber gem became the prized
@@ -18,8 +23,8 @@ export default function Prologue() {
         sea, only to be ruled by a dead bee.`}
       </p>
       <p>
-        {`Golden sap wept And yet, she wanted this fate with every fiber of her
-        being. She couldn&apos;t trust anyone else with this duty. No one else
+        {`Golden sap wept. And yet, she wanted this fate with every fiber of her
+        being. She couldn't trust anyone else with this duty. No one else
         understood the threads that bound everything together the way she did.`}
       </p>
       <p>

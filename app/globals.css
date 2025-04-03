@@ -1,13 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap");
+
 @font-face {
   font-family: "Calibri Light";
   src: url("/public/calibril.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Garamond";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Garamond"), url("/public/garamond.woff") format("woff");
 }
 
 * {
@@ -29,9 +24,37 @@
   overflow-x: clip;
 }
 
+.bookicons-image-container-three {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 4%;
+  width: 9vw;
+  height: 22vh;
+  gap: 1vh;
+  background-color: #3e2a5c;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+}
+
 .chapteronetextimg {
+  margin-top: 2vh;
+  margin-bottom: 1vh;
   width: 8vw;
-  height: 4vh;
+  height: 7vh;
+}
+
+.amberqueentextimg {
+  margin-top: 2vh;
+  width: 10vw;
+  height: 11vh;
+}
+
+.subscribe-text-img {
+  margin-top: 3vh;
+  margin-bottom: 2vh;
+  width: 8vw;
+  height: 5vh;
 }
 
 .container {
@@ -189,7 +212,7 @@ body {
 }
 
 .chapter-text {
-  font-family: "Garamond", serif;
+  font-family: "EB Garamond", serif;
   color: black;
   font-size: 2.5vh;
 }
@@ -247,7 +270,6 @@ body {
   z-index: 4;
   padding: 0;
   margin: 0;
-  /* overflow-x: hidden; */
 }
 
 .lake {
@@ -258,8 +280,6 @@ body {
   left: 0;
   width: 100vw;
   height: 100%;
-
-  /* overflow-x: hidden; */
 }
 
 .europemap {
@@ -285,17 +305,21 @@ body {
   bottom: 55vh;
   left: 0;
   width: 100vw;
-  height: 120vh;
+  height: 110vh;
   padding: 0;
   margin: 0;
-  /* overflow-x: hidden; */
 }
 
 .underwater-inner {
   z-index: 10;
-  /* object-fit: scale-down; */
   width: 100%;
   height: 100%;
+}
+
+.main-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
 }
 
 .bookicons-container {
@@ -326,6 +350,7 @@ body {
   width: 40vw;
   z-index: 10;
   width: 100vw;
+  margin-top: 5vh;
 }
 
 .temp-text {
@@ -333,46 +358,22 @@ body {
   font-size: 20px;
 }
 
-.bookicons-image-container-three {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  border-radius: 4%;
-  font-size: 40px;
-  width: 16vh;
-  height: 22vh;
-  gap: 1vh;
-  background-color: #3e2a5c;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
-}
-
-.bookicons-author {
-  font-size: 1vh;
-  color: black;
-}
-
 .bookicons-image {
-  font-size: 40px;
   width: 10vh;
   height: 10vh;
-  /* background-color: #3e2a5c; */
 }
 
-/* .bookicons-image {
-  border-radius: 4%;
-  font-size: 40px;
-  width: 16vh;
-  height: 22vh;
-  background-color: #3e2a5c;
-} */
+.amberqueen-bookicons-image {
+  width: 12vh;
+  height: 10vh;
+  object-fit: contain;
+}
 
-/* .bookicons-image {
-  border-radius: 5%;
-  font-size: 40px;
-  width: 20vh;
-  height: 20vh;
-} */
+.amberqueen-bookicons-image-container {
+  object-fit: contain;
+  width: 12vh;
+  height: 2vh;
+}
 
 .underwater-image-temp {
   border-radius: 5%;
@@ -433,12 +434,6 @@ input {
   text-align: center;
 }
 
-.prologue-text {
-  font-size: 30px;
-  text-align: center;
-  padding-bottom: 2vh;
-}
-
 .sign-up-button {
   background-color: #000;
   color: #fff;
@@ -462,6 +457,7 @@ input {
 
 .modal-overlay {
   position: fixed;
+  padding-top: 10vh;
   top: 0;
   left: 0;
   right: 0;
@@ -481,7 +477,19 @@ input {
   max-width: 50%;
   overflow-y: auto;
   width: 80%;
-  height: 80vh;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.modal-content-form {
+  background-color: #e6e6e6;
+  border-radius: 8px;
+  max-width: 50%;
+  overflow-y: auto;
+  width: 80%;
+  height: 60vh;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -489,7 +497,8 @@ input {
 }
 
 .modal-header {
-  padding: 20px;
+  padding-top: 2vh;
+  padding-left: 2vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -526,6 +535,56 @@ input {
   align-items: center;
   z-index: 1000;
   animation: fadeIn 0.5s ease-in-out;
+}
+
+.title {
+  font-size: 4vh;
+  text-align: center;
+  margin-top: 0;
+  font-family: "EB Garamond", serif;
+  font-weight: bold;
+  margin-bottom: 1.5vh;
+}
+
+.title-author {
+  font-size: 4vh;
+  text-align: center;
+  margin-top: 2vh;
+  font-family: "EB Garamond", serif;
+  font-weight: bold;
+  margin-bottom: 1.5vh;
+}
+
+.prologue-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.prologue-img {
+  width: 10vw;
+  height: 18vh;
+  object-fit: contain;
+  /* border-radius: 40% / 50%; */
+}
+
+.chapter-one-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.chapter-one-img {
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  width: 8vw;
+  height: 13vh;
+  object-fit: contain;
+  /* border-radius: 3vw; */
 }
 
 .modal-content-subscribe {
@@ -602,6 +661,17 @@ input {
   background-color: #e6e6e6;
 }
 
+.modal-body-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  padding-bottom: 2vh;
+  flex-grow: 1;
+  background-color: #e6e6e6;
+}
+
 .book-content {
   width: 75%;
   padding: 0 10px 0 10px;
@@ -610,9 +680,10 @@ input {
 
 .bookicons-image-container-two {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 3vw;
 }
 
 .black-screen {
@@ -675,23 +746,32 @@ input {
   }
 }
 
+.contact-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 2vh;
+}
+
 .contact-form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  width: 30vw;
-  padding: 2rem;
-  background: black;
+  width: 100%;
+  height: 100%;
   border-radius: 8px;
-  border: 1px solid white;
 }
 
 .contact-form label {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  color: #fff;
-  font-family: Garamond, serif;
+  color: black;
+  font-size: 1vw;
+  font-family: "EB Garamond", serif;
 }
 
 .contact-form input,
@@ -701,7 +781,17 @@ input {
   border-radius: 1vh;
   background: rgba(255, 255, 255, 0.9);
   color: #000;
-  font-family: Garamond, serif;
+  font-family: "EB Garamond", serif;
+}
+
+
+.form-input {
+  padding: 0.8rem;
+  border: 1px solid black;
+  border-radius: 1vh;
+  background: rgba(255, 255, 255, 0.9);
+  color: #000;
+  font-family: "EB Garamond", serif;
 }
 
 form textarea {
@@ -711,12 +801,14 @@ form textarea {
 
 .contact-form button {
   padding: 1rem 2rem;
-  background: #4a4a4a;
+  background: rgb(26, 26, 26);
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 1vh;
+  width: 100%;
+  height: 4vh;
   cursor: pointer;
-  font-family: Garamond, serif;
+  font-family: "EB Garamond", serif;
   font-size: 1rem;
   transition: background-color 0.3s ease;
 }
@@ -755,7 +847,7 @@ form textarea {
   padding: 0.8rem 1.5rem;
   border-radius: 4px;
   cursor: pointer;
-  font-family: Garamond, serif;
+  font-family: "EB Garamond", serif;
   transition: background-color 0.3s ease;
 }
 
@@ -781,17 +873,53 @@ form textarea {
 
 .bookicons-image-container-three:nth-of-type(2),
 .bookicons-image-container-two:nth-child(2) .bookicons-image-container-three {
-  background: #3c295a;
+  background: #697892;
 }
 
 .bookicons-image-container-three:nth-of-type(3),
 .bookicons-image-container-two:nth-child(3) .bookicons-image-container-three {
-  background: #697892;
+  background: #3e2d5c;
+
+  box-shadow: 0 0 30px 0 #e29e41;
+  width: 11vw;
+  height: 26vh;
 }
 
 .bookicons-image-container-three:nth-of-type(4),
 .bookicons-image-container-two:nth-child(4) .bookicons-image-container-three {
   background: #4b1a14;
+}
+
+.bookicons-image-container-three:hover {
+  cursor: pointer;
+}
+
+.temp {
+  width: 6.5vw;
+  height: 17vh;
+}
+
+.temptwo {
+  padding: 0;
+  margin: 0;
+  margin-top: 1vh;
+  width: 6vw;
+  height: 7vh;
+}
+
+.tempfour {
+  padding: 0;
+  margin: 0;
+  margin-top: 3vh;
+  margin-bottom: 1vh;
+  width: 6vw;
+  height: 4vh;
+}
+
+.tempthree {
+  object-fit: contain;
+  width: 7vw;
+  height: 6vh;
 }
 
 @keyframes fadeIn {
