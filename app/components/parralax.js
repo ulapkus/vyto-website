@@ -49,7 +49,6 @@ export default function Parralax() {
         className="castle"
         style={{ y: y2, x: 0, scale: scaleCastle }}
         dragConstraints={{ left: 0, right: 0 }}
-        dragElastic={0.1}
         priority="true"
       >
         <Image src={castle} alt="" className="castle-inner" />

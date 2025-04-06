@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import Vytas from "../../public/bookimages/vytas.jpeg";
+import creditsone from "../../public/booktitles/credits.png";
 import subscribe from "../../public/booktitles/subscribe.png";
 import formicon from "../../public/bookimages/form.png";
 import subscribeicon from "../../public/bookimages/subscription.png";
@@ -12,23 +12,28 @@ import prologue from "../../public/bookimages/prologue3.png";
 import icon from "../../public/bookimages/human-icon-png-1901.png";
 import Subscribenodelay from "../components/subscribenodelay";
 import contactform from "../../public/booktitles/contactform.png";
+import Credits from "../components/credits";
 import Author from "../chapters/author";
 import Modal from "./modal";
 import Form from "../chapters/form";
+import creditsicon from "../../public/bookimages/creditsicon.png";
+import amberv3 from "../../public/parralax/newwww.png";
 
 export default function BookIcons() {
   const [showModal, setShowModal] = useState(false);
   const [showAuthor, setShowAuthor] = useState(false);
   const [showForm, setShowForm] = useState(false);
   const [showSubscribe, setShowSubscribe] = useState(false);
-
+  const [showCredits, setShowCredits] = useState(false);
   useEffect(() => {
     document.body.style.overflow =
-      showModal || showAuthor || showForm || showSubscribe ? "hidden" : "auto";
+      showModal || showAuthor || showForm || showSubscribe || showCredits
+        ? "hidden"
+        : "auto";
     return () => {
       document.body.style.overflow = "auto";
     };
-  }, [showModal, showAuthor, showForm, showSubscribe]);
+  }, [showModal, showAuthor, showForm, showSubscribe, showCredits]);
 
   return (
     <div className="bookicons-container">
@@ -105,6 +110,31 @@ export default function BookIcons() {
         </div>
       )}
 
+      {showCredits && (
+        <div
+          className="modal-overlay-credits"
+          onClick={() => setShowCredits(false)}
+        >
+          <div
+            className="modal-content-credits"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="modal-header-credits">
+              <button
+                className="close-button-credits"
+                onClick={() => setShowCredits(false)}
+              >
+                ×
+              </button>
+            </div>
+            <div className="modal-body-credits">
+              <Credits />
+            </div>
+            <div className="modal-footer-credits"></div>
+          </div>
+        </div>
+      )}
+
       <div className="bookicons-image-container">
         {/* Contact Form Container */}
         <div
@@ -163,7 +193,8 @@ export default function BookIcons() {
           onClick={() => setShowModal(true)}
         >
           <div className="bookicons-image-container-three">
-            <Image alt="" src={amberqueen} className="amberqueentextimg" />
+            <Image alt="" src={amberv3} className="amberqueentextimg" />
+
             <div className="amberqueen-bookicons-image-container">
               <Image
                 className="amberqueen-bookicons-image"
@@ -201,18 +232,18 @@ export default function BookIcons() {
           onMouseLeave={(e) => {
             e.currentTarget.style.transform = "scale(1)";
           }}
-          onClick={() => setShowSubscribe(true)}
+          onClick={() => setShowCredits(true)}
         >
           <div className="bookicons-image-container-three temp">
             <Image
               alt=""
-              src={subscribe}
+              src={creditsone}
               className="subscribe-text-img tempfour"
             />
             <Image
               className="bookicons-image tempthree"
               alt=""
-              src={subscribeicon}
+              src={creditsicon}
             />
           </div>
         </div>
