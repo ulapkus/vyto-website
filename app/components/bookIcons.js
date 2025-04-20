@@ -2,22 +2,15 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import creditsone from "../../public/booktitles/credits.png";
-import subscribe from "../../public/booktitles/subscribe.png";
-import formicon from "../../public/bookimages/form.png";
-import subscribeicon from "../../public/bookimages/subscription.png";
-import abouttheauthor from "../../public/booktitles/abouttheauthor.png";
-import amberqueen from "../../public/booktitles/amberqueen.png";
-import prologue from "../../public/bookimages/prologue3.png";
-import icon from "../../public/bookimages/human-icon-png-1901.png";
+import email from "../../public/bookimages/email.png";
+import pen from "../../public/bookimages/pen.png";
+import scroll from "../../public/bookimages/scroll.png";
+import notifications from "../../public/bookimages/notifications.png";
 import Subscribenodelay from "../components/subscribenodelay";
-import contactform from "../../public/booktitles/contactform.png";
 import Credits from "../components/credits";
 import Author from "../chapters/author";
 import Modal from "./modal";
 import Form from "../chapters/form";
-import creditsicon from "../../public/bookimages/creditsicon.png";
-import amberv3 from "../../public/parralax/newwww.png";
 
 export default function BookIcons() {
   const [showModal, setShowModal] = useState(false);
@@ -36,218 +29,204 @@ export default function BookIcons() {
   }, [showModal, showAuthor, showForm, showSubscribe, showCredits]);
 
   return (
-    <div className="bookicons-container">
-      <Modal showModal={showModal} setShowModal={setShowModal} />
+    <div className="bookicons-container-outer">
+      <div className="bookicons-container">
+        <Modal showModal={showModal} setShowModal={setShowModal} />
 
-      {/* Author Modal */}
-      {showAuthor && (
-        <div className="modal-overlay" onClick={() => setShowAuthor(false)}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <div className="modal-header">
-              <button
-                className="close-button"
-                onClick={() => setShowAuthor(false)}
-              >
-                ×
-              </button>
-            </div>
-            <div className="modal-body">
-              <div className="book-content">
-                <Author />
+        {showAuthor && (
+          <div className="modal-overlay" onClick={() => setShowAuthor(false)}>
+            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+              <div className="modal-header">
+                <button
+                  className="close-button"
+                  onClick={() => setShowAuthor(false)}
+                >
+                  ×
+                </button>
+              </div>
+              <div className="modal-body">
+                <div className="book-content">
+                  <Author />
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
 
-      {/* Form Modal */}
-      {showForm && (
-        <div className="modal-overlay" onClick={() => setShowForm(false)}>
-          <div
-            className="modal-content-form"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="modal-header">
-              <button
-                className="close-button"
-                onClick={() => setShowForm(false)}
-              >
-                ×
-              </button>
-            </div>
-            <div className="modal-body-form">
-              <div className="book-content">
-                <Form />
+        {showForm && (
+          <div className="modal-overlay" onClick={() => setShowForm(false)}>
+            <div
+              className="modal-content-form"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="modal-header">
+                <button
+                  className="close-button"
+                  onClick={() => setShowForm(false)}
+                >
+                  ×
+                </button>
+              </div>
+              <div className="modal-body-form">
+                <div className="book-content">
+                  <Form />
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
 
-      {/* Subscribe Modal */}
-      {showSubscribe && (
-        <div
-          className="modal-overlay-subscribe"
-          onClick={() => setShowSubscribe(false)}
-        >
+        {/* Subscribe Modal */}
+        {showSubscribe && (
           <div
-            className="modal-content-subscribe"
-            onClick={(e) => e.stopPropagation()}
+            className="modal-overlay-subscribe"
+            onClick={() => setShowSubscribe(false)}
           >
-            <div className="modal-header-subscribe">
-              <button
-                className="close-button-subscribe"
-                onClick={() => setShowSubscribe(false)}
-              >
-                ×
-              </button>
+            <div
+              className="modal-content-subscribe"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="modal-header-subscribe">
+                <button
+                  className="close-button-subscribe"
+                  onClick={() => setShowSubscribe(false)}
+                >
+                  ×
+                </button>
+              </div>
+              <div className="modal-body-subscribe">
+                <Subscribenodelay />
+              </div>
+              <div className="modal-footer-subscribe"></div>
             </div>
-            <div className="modal-body-subscribe">
-              <Subscribenodelay />
-            </div>
-            <div className="modal-footer-subscribe"></div>
           </div>
-        </div>
-      )}
+        )}
 
-      {showCredits && (
-        <div
-          className="modal-overlay-credits"
-          onClick={() => setShowCredits(false)}
-        >
+        {showCredits && (
           <div
-            className="modal-content-credits"
-            onClick={(e) => e.stopPropagation()}
+            className="modal-overlay-credits"
+            onClick={() => setShowCredits(false)}
           >
-            <div className="modal-header-credits">
-              <button
-                className="close-button-credits"
-                onClick={() => setShowCredits(false)}
-              >
-                ×
-              </button>
+            <div
+              className="modal-content-credits"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="modal-header-credits">
+                <button
+                  className="close-button-credits"
+                  onClick={() => setShowCredits(false)}
+                >
+                  ×
+                </button>
+              </div>
+              <div className="modal-body-credits">
+                <Credits />
+              </div>
+              <div className="modal-footer-credits"></div>
             </div>
-            <div className="modal-body-credits">
-              <Credits />
+          </div>
+        )}
+
+        <div className="bookicons-image-container-left">
+          <div className="left-text-container">
+            <div className="left-text-one">READ THE</div>
+            <div className="left-text-one">AMBER QUEEN</div>
+          </div>
+
+          <div className="left-text-two" onClick={() => setShowModal(true)}>
+            <span className="calibri-o">O</span>PEN B
+            <span className="calibri-o">OO</span>K
+          </div>
+        </div>
+
+        <div className="bookicons-image-container-right">
+          <div className="bookicons-image-container-right-inner">
+            <div
+              className="book-container"
+              style={{
+                transition: "transform 0.6s ease",
+                transform: "scale(1)",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = "scale(1.05)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = "scale(1)";
+              }}
+              onClick={() => setShowAuthor(true)}
+            >
+              <Image className="bookicons-image" alt="" src={pen} />
+              <div className="bookicons-title">
+                AB<span className="calibri-o">O</span>UT THE AUTH
+                <span className="calibri-o">O</span>R
+              </div>
             </div>
-            <div className="modal-footer-credits"></div>
-          </div>
-        </div>
-      )}
 
-      <div className="bookicons-image-container">
-        {/* Contact Form Container */}
-        <div
-          className="bookicons-image-container-two"
-          style={{ transition: "transform 0.6s ease", transform: "scale(1)" }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.transform = "scale(1.05)";
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.transform = "scale(1)";
-          }}
-          onClick={() => setShowForm(true)}
-        >
-          <div className="bookicons-image-container-three temp">
-            <Image
-              alt=""
-              src={contactform}
-              className="chapteronetextimg temptwo"
-            />
-            <Image
-              className="bookicons-image tempthree"
-              alt=""
-              src={formicon}
-            />
-          </div>
-        </div>
+            <div
+              className="book-container"
+              style={{
+                transition: "transform 0.6s ease",
+                transform: "scale(1)",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = "scale(1.05)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = "scale(1)";
+              }}
+              onClick={() => setShowSubscribe(true)}
+            >
+              <Image className="bookicons-image" alt="" src={notifications} />
+              <div className="bookicons-title">
+                SIGN UP F<span className="calibri-o">O</span>R UPDATES
+              </div>
+            </div>
 
-        {/* About the Author Container */}
-        <div
-          className="bookicons-image-container-two"
-          style={{ transition: "transform 0.6s ease", transform: "scale(1)" }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.transform = "scale(1.05)";
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.transform = "scale(1)";
-          }}
-          onClick={() => setShowAuthor(true)}
-        >
-          <div className="bookicons-image-container-three">
-            <Image alt="" src={abouttheauthor} className="chapteronetextimg" />
-            <Image className="bookicons-image" alt="" src={icon} />
-          </div>
-        </div>
+            <div
+              className="book-container"
+              style={{
+                transition: "transform 0.6s ease",
+                transform: "scale(1)",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = "scale(1.05)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = "scale(1)";
+              }}
+              onClick={() => setShowForm(true)}
+            >
+              <Image className="bookicons-image" alt="" src={email} />
+              <div className="bookicons-title">
+                C <span className="calibri-o">O</span>NTACT
+              </div>
+            </div>
 
-        {/* Amber Queen Container */}
-        <div
-          className="bookicons-image-container-two"
-          style={{ transition: "transform 0.6s ease", transform: "scale(1)" }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.transform = "scale(1.05)";
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.transform = "scale(1)";
-          }}
-          onClick={() => setShowModal(true)}
-        >
-          <div className="bookicons-image-container-three">
-            <Image alt="" src={amberv3} className="amberqueentextimg" />
-
-            <div className="amberqueen-bookicons-image-container">
+            <div
+              className="book-container"
+              style={{
+                transition: "transform 0.6s ease",
+                transform: "scale(1)",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = "scale(1.05)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = "scale(1)";
+              }}
+              onClick={() => setShowCredits(true)}
+            >
               <Image
-                className="amberqueen-bookicons-image"
+                className="bookicons-image tempthree"
                 alt=""
-                src={prologue}
+                src={scroll}
               />
+              <div className="bookicons-title">CREDITS</div>
             </div>
-          </div>
-        </div>
-
-        {/* Subscribe Container */}
-        <div
-          className="bookicons-image-container-two"
-          style={{ transition: "transform 0.6s ease", transform: "scale(1)" }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.transform = "scale(1.05)";
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.transform = "scale(1)";
-          }}
-          onClick={() => setShowSubscribe(true)}
-        >
-          <div className="bookicons-image-container-three">
-            <Image alt="" src={subscribe} className="subscribe-text-img" />
-            <Image className="bookicons-image" alt="" src={subscribeicon} />
-          </div>
-        </div>
-
-        <div
-          className="bookicons-image-container-two"
-          style={{ transition: "transform 0.6s ease", transform: "scale(1)" }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.transform = "scale(1.05)";
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.transform = "scale(1)";
-          }}
-          onClick={() => setShowCredits(true)}
-        >
-          <div className="bookicons-image-container-three temp">
-            <Image
-              alt=""
-              src={creditsone}
-              className="subscribe-text-img tempfour"
-            />
-            <Image
-              className="bookicons-image tempthree"
-              alt=""
-              src={creditsicon}
-            />
           </div>
         </div>
       </div>
+      {/* <div className="black-bottom"></div> */}
     </div>
   );
 }

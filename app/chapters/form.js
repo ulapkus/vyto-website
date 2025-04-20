@@ -77,9 +77,15 @@ export default function Form() {
             required
           />
         </label>
-        <button type="submit" disabled={status.submitting}>
-          {status.submitting ? "Sending..." : "Send"}
-        </button>
+        <div className="contact-form-button-container">
+          <button
+            type="submit"
+            className="contact-form-button"
+            disabled={status.submitting}
+          >
+            {status.submitting ? "Sending..." : "SUBMIT"}
+          </button>
+        </div>
         {status.error && <p className="error-message">{status.error}</p>}
       </form>
     </div>

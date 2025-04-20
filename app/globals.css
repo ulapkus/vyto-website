@@ -5,6 +5,20 @@
   src: url("/public/calibril.woff") format("woff");
 }
 
+@font-face {
+  font-family: "GameOfThrones";
+  src: url("/fonts/gameofthrones.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CMU Serif";
+  src: url("/fonts/cmuserif.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -22,19 +36,6 @@
   position: relative;
   width: 100%;
   overflow-x: clip;
-}
-
-.bookicons-image-container-three {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
-  border-radius: 4%;
-  width: 9vw;
-  height: 22vh;
-  gap: 1vh;
-  background-color: #3e2a5c;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
 }
 
 .chapteronetextimg {
@@ -124,8 +125,10 @@ body {
 }
 
 .bookicons-title {
-  font-size: 20px;
-  color: white;
+  font-size: 1.1vw;
+  color: #fde8b7;
+  text-align: center;
+  font-family: "GameOfThrones";
 }
 
 .text-two {
@@ -176,6 +179,12 @@ body {
   width: 100%;
   height: 100%;
   z-index: 2;
+}
+
+.black-bottom {
+  width: 100%;
+  height: 10vh;
+  background-color: black;
 }
 
 .signupsuccess {
@@ -261,7 +270,7 @@ body {
 }
 
 .novel-by {
-  color: #fae8c0;
+  color: #fde8b7;
   font-size: 15px;
   z-index: 100;
   letter-spacing: 0.2vw;
@@ -331,16 +340,24 @@ body {
   height: 100vh;
 }
 
-.bookicons-container {
+.bookicons-container-outer {
   display: flex;
-  gap: 3vh;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  /* height: 100%; */
+}
+
+.bookicons-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
   position: absolute;
-  bottom: 40vh;
+  top: 0vh;
   z-index: 6;
-  height: 50%;
+  height: 100%;
   width: 100%;
 }
 
@@ -350,26 +367,67 @@ body {
   margin-bottom: 2vh;
 }
 
-.bookicons-image-container {
+.bookicons-image-container-left {
   display: flex;
-  gap: 3vw;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  width: 40vw;
-  z-index: 10;
+  align-items: flex-start;
+  gap: 2.7vh;
+  margin: 0 0 30vh 15vw;
   width: 100vw;
-  margin-top: 5vh;
+  height: 100vh;
 }
 
-.temp-text {
-  color: white;
-  font-size: 20px;
+.left-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.left-text-one {
+  font-size: 4vw;
+  color: #fde8b7;
+  font-family: "GameOfThrones";
+}
+
+.left-text-two {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.1vw;
+  color: #fde8b7;
+  border: 1px solid #fde8b7;
+  border-radius: 8px;
+  font-family: "GameOfThrones";
+  padding: 2vh 2.7vw 2vh 2.7vw;
+}
+
+.left-text-two:hover {
+  background-color: #fde8b7;
+  color: black;
+}
+
+.bookicons-image-container-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.bookicons-image-container-right-inner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2rem;
+  width: fit-content;
+  margin: auto;
 }
 
 .bookicons-image {
-  width: 10vh;
-  height: 10vh;
+  width: 6vh;
+  height: 6vh;
+  object-fit: contain;
 }
 
 .amberqueen-bookicons-image {
@@ -678,13 +736,13 @@ input {
 }
 
 .credits-title {
-  font-size: 4vh;
+  font-size: 3.5vh;
   font-family: "EB Garamond", serif;
   margin-bottom: 1.5vh;
 }
 
 .credits-list-item {
-  font-size: 3vh;
+  font-size: 2.5vh;
   font-family: "EB Garamond", serif;
 }
 
@@ -766,27 +824,25 @@ input {
   line-height: 25px;
 }
 
-.bookicons-image-container-two {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 3vw;
+.book-container:hover {
+  cursor: pointer;
 }
 
-.black-screen {
-  z-index: 1;
-  height: 100vh;
-  width: 100vw;
-  padding-top: 10vw;
+.book-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  background-color: black;
-  position: relative;
-  bottom: 100vh;
-  /* bottom: 1400px; */
+  justify-content: center;
+  align-items: center;
+  gap: 2vh;
+  height: 29vh;
+  width: 12vw;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  padding: 1vh 1vw 1vh 1vw;
 }
 
 .tooltip {
@@ -847,6 +903,7 @@ input {
 .contact-form {
   display: flex;
   flex-direction: column;
+
   gap: 1rem;
   width: 100%;
   height: 100%;
@@ -857,9 +914,9 @@ input {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  color: black;
-  font-size: 1vw;
   font-family: "EB Garamond", serif;
+  color: black;
+  font-size: 2.5vh;
 }
 
 .contact-form input,
@@ -877,27 +934,41 @@ input {
   border: 1px solid black;
   border-radius: 1vh;
   background: rgba(255, 255, 255, 0.9);
-  color: #000;
+  color: black;
+  font-size: 2vh;
   font-family: "EB Garamond", serif;
 }
 
 form textarea {
   min-height: 150px;
   resize: vertical;
+  font-size: 2vh;
 }
 
-.contact-form button {
+.contact-form-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.contact-form-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 1rem 2rem;
   background: rgb(26, 26, 26);
   color: white;
+  font-size: 2vh;
+
   border: none;
   border-radius: 1vh;
-  width: 100%;
-  height: 4vh;
+  width: 40%;
+  height: 5vh;
   cursor: pointer;
   font-family: "EB Garamond", serif;
-  font-size: 1rem;
   transition: background-color 0.3s ease;
+  font-family: "EB Garamond", serif;
 }
 
 .contact-form button:hover {
@@ -953,50 +1024,8 @@ form textarea {
   }
 }
 
-.bookicons-image-container-three:nth-of-type(1),
-.bookicons-image-container-two:nth-child(1) .bookicons-image-container-three {
-  background: #386152;
-  background: #917b80;
-  background: #3e2d5c;
-}
-
-.bookicons-image-container-three:nth-of-type(2),
-.bookicons-image-container-two:nth-child(2) .bookicons-image-container-three {
-  background: #697892;
-  background: #9c8054;
-  background: #917b80;
-  background: #3e2d5c;
-}
-
-.bookicons-image-container-three:nth-of-type(3),
-.bookicons-image-container-two:nth-child(3) .bookicons-image-container-three {
-  background: #3e2d5c;
-
-  box-shadow: 0 0 30px 0 #e29e41;
-  width: 11vw;
-  height: 26vh;
-}
-
-.bookicons-image-container-three:nth-of-type(4),
-.bookicons-image-container-two:nth-child(4) .bookicons-image-container-three {
-  /* background: #4b1a14; */
-  background: #855609;
-  background: #917b80;
-  background: #3e2d5c;
-}
-
-.bookicons-image-container-three:nth-of-type(5),
-.bookicons-image-container-two:nth-child(5) .bookicons-image-container-three {
-  background: #ba5120;
-  background: #3e2d5c;
-}
-s .bookicons-image-container-three:hover {
+.bookicons-image-container-three:hover {
   cursor: pointer;
-}
-
-.temp {
-  width: 6.5vw;
-  height: 17vh;
 }
 
 .temptwo {
@@ -1040,4 +1069,59 @@ s .bookicons-image-container-three:hover {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.calibri-o {
+  font-family: "CMU Serif";
+  font-size: 1.7vw;
+}
+
+.author-image-container {
+  margin-top: 2vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+.author-image-container-inner {
+  object-fit: contain;
+  height: 50vh;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+.author-image {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+
+.author-image-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin: 1vh 0 7vh 0;
+}
+
+.image-caption-one {
+  font-size: 1.3vw;
+  font-family: "EB Garamond", serif;
+  padding: 0;
+  margin: 0;
+}
+
+.image-caption-two {
+  font-size: 1.3vw;
+  font-family: "EB Garamond", serif;
+  font-style: italic;
+  padding: 0;
+  margin: 0;
 }

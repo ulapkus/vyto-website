@@ -96,7 +96,7 @@ export default function Parralax() {
       >
         <Image src={underwater} alt="underwater" className="underwater-inner" />
         <BookIcons />
-        {/* <Footer /> */}
+        {/* <div className="black-bottom"></div> */}
       </motion.div>
     </div>
   );
