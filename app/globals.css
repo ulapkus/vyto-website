@@ -45,12 +45,6 @@
   height: 7vh;
 }
 
-/* .amberqueentextimg {
-  margin-top: 2vh;
-  width: 10vw;
-  height: 11vh;
-} */
-
 .amberqueentextimg {
   margin-top: 2vh;
   width: 10vw;
@@ -116,9 +110,11 @@
 }
 
 body {
-  padding: 0;
   margin: 0;
+  padding: 0;
+  min-height: 100vh;
   overflow-x: hidden;
+  position: relative;
   width: 100%;
   overscroll-behavior: none;
   background-color: black;
@@ -146,13 +142,6 @@ body {
   padding-bottom: 2vh;
 }
 
-.sky {
-  width: 100vw;
-  height: 100vh;
-  z-index: 2;
-  /* overflow-x: hidden; */
-}
-
 .mist {
   display: flex;
   justify-content: end;
@@ -175,20 +164,16 @@ body {
   height: 100%;
 }
 
+.sky {
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+}
+
 .sky-inner {
   width: 100%;
   height: 100%;
   z-index: 2;
-}
-
-.black-bottom {
-  width: 100%;
-  height: 10vh;
-  background-color: black;
-}
-
-.signupsuccess {
-  color: white;
 }
 
 .castle {
@@ -200,7 +185,7 @@ body {
   /* wiggle has to do with this */
   height: 100vh;
   z-index: 5;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 .castle-inner {
@@ -208,6 +193,10 @@ body {
   width: 100vw;
   height: 100%;
   z-index: 5;
+}
+
+.signupsuccess {
+  color: white;
 }
 
 .fogOne {
@@ -326,6 +315,7 @@ body {
   height: 110vh;
   padding: 0;
   margin: 0;
+  margin-bottom: -100vh;
 }
 
 .underwater-inner {
@@ -346,7 +336,6 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  /* height: 100%; */
 }
 
 .bookicons-container {

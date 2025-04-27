@@ -34,7 +34,6 @@ export default function Parralax() {
         <Image src={amber} alt="" className="text" priority="true" />
         <Image src={queen} alt="" className="text text-queen" priority="true" />
         <div className="novel-by">A NOVEL BY VYTAS</div>
-        {/* <div className="novel-by">a novel by Vytas</div> */}
       </motion.div>
       <motion.div
         className="sky"
@@ -49,6 +48,7 @@ export default function Parralax() {
         className="castle"
         style={{ y: y2, x: 0, scale: scaleCastle }}
         dragConstraints={{ left: 0, right: 0 }}
+        dragElastic={0.1}
         priority="true"
       >
         <Image src={castle} alt="" className="castle-inner" />
@@ -96,7 +96,6 @@ export default function Parralax() {
       >
         <Image src={underwater} alt="underwater" className="underwater-inner" />
         <BookIcons />
-        {/* <div className="black-bottom"></div> */}
       </motion.div>
     </div>
   );

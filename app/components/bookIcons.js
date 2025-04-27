@@ -226,7 +226,6 @@ export default function BookIcons() {
           </div>
         </div>
       </div>
-      {/* <div className="black-bottom"></div> */}
     </div>
   );
 }
