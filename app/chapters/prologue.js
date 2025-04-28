@@ -7,7 +7,7 @@ export default function Prologue() {
       <div className="prologue-img-container">
         <Image src={prologueImage} alt="Prologue" className="prologue-img" />
       </div>
-      <p>
+      <p className="first-paragraph">
         {`Golden sap wept from a pine and entombed a bee as ancient as Mount
         Everest. Millions of years later, the amber gem became the prized
         possession of Jūratė, the mermaid queen of the Baltic Sea. The entombed

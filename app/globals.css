@@ -182,10 +182,8 @@ body {
   bottom: 50vh;
   left: 0;
   width: 100vw;
-  /* wiggle has to do with this */
   height: 100vh;
   z-index: 5;
-  /* overflow-x: hidden; */
 }
 
 .castle-inner {
@@ -289,6 +287,12 @@ body {
   height: 100%;
 }
 
+.lake-inner {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
 .europemap {
   object-fit: contain;
   margin-top: 4vh;
@@ -297,12 +301,6 @@ body {
   height: 100%;
   border-radius: 5px;
   border: 2px solid black;
-}
-
-.lake-inner {
-  object-fit: contain;
-  width: 100%;
-  height: 100%;
 }
 
 .underwater {
@@ -429,22 +427,6 @@ body {
   object-fit: contain;
   width: 12vh;
   height: 2vh;
-}
-
-.underwater-image-temp {
-  border-radius: 5%;
-  font-size: 40px;
-  width: 15vh;
-  height: 15vh;
-}
-
-.underwater-image-temp-container {
-  margin-top: 1vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1vh;
 }
 
 input {
@@ -623,7 +605,6 @@ input {
   width: 10vw;
   height: 18vh;
   object-fit: contain;
-  /* border-radius: 40% / 50%; */
 }
 
 .chapter-one-img-container {
@@ -640,7 +621,6 @@ input {
   width: 8vw;
   height: 13vh;
   object-fit: contain;
-  /* border-radius: 3vw; */
 }
 
 .modal-content-subscribe {
@@ -720,7 +700,6 @@ input {
   overflow-y: auto;
   flex-grow: 1;
   padding: 0 5vw 0 5vw;
-
   background-color: #e6e6e6;
 }
 
@@ -1113,4 +1092,436 @@ form textarea {
   font-style: italic;
   padding: 0;
   margin: 0;
+}
+
+@media screen and (max-width: 480px) {
+  .castle-inner {
+    object-fit: contain;
+    width: 100vw;
+    height: 100%;
+    z-index: 5;
+  }
+
+  .castle {
+    object-fit: contain;
+    position: relative;
+    bottom: 80vh;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 5;
+  }
+
+  .fogOne {
+    display: flex;
+    justify-content: end;
+    object-fit: contain;
+    position: absolute;
+    bottom: 250px;
+    left: 0;
+    width: 100vw;
+    height: 30vh;
+    z-index: 30;
+  }
+
+  .fogone-inner {
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    z-index: 30;
+  }
+
+  .lake-inner {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
+
+  .lake {
+    z-index: 20;
+    object-fit: contain;
+    position: absolute;
+    top: 35vh;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+  }
+
+  .underwater {
+    z-index: 25;
+    object-fit: scale-down;
+    position: relative;
+    bottom: 105vh;
+    left: 0;
+    width: 100vw;
+    height: 110vh;
+    padding: 0;
+    margin: 0;
+    margin-bottom: -100vh;
+  }
+
+  .underwater-inner {
+    object-fit: cover;
+
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+  }
+
+  .bookicons-container-outer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .bookicons-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 0vh;
+    z-index: 6;
+    height: 100%;
+    width: 100%;
+    gap: 2vh;
+    padding: 0 8vw 0 8vw;
+  }
+
+  .book-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+    height: 40vw;
+    width: 40vw;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    padding: 1vh 1vw 1vh 1vw;
+  }
+
+  .bookicons-image-container-right-inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2vh;
+    width: fit-content;
+    margin: 0;
+  }
+
+  .book-container-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    gap: 1vh;
+    height: 20vh;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    padding: 1vh 1vw 1vh 1vw;
+    font-size: 1.1vw;
+    color: #fde8b7;
+    text-align: center;
+    font-family: "GameOfThrones";
+  }
+
+  .bookicons-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 0vh;
+    z-index: 6;
+    height: 100%;
+    width: 100%;
+  }
+
+  .bookicons-title {
+    font-size: 4vw;
+    color: #fde8b7;
+    text-align: center;
+    font-family: "GameOfThrones";
+  }
+
+  .calibri-o {
+    font-family: "CMU Serif";
+    font-size: 6vw;
+  }
+
+  .left-text-one {
+    font-size: 7vw;
+    color: #fde8b7;
+    font-family: "GameOfThrones";
+  }
+
+  .mist {
+    display: flex;
+    justify-content: end;
+    object-fit: contain;
+    position: absolute;
+    top: 700px;
+    left: 0;
+    width: 70vw;
+    height: 50vh;
+    z-index: 3;
+    opacity: 0.2;
+  }
+
+  .mist-inner {
+    position: absolute;
+    bottom: 300px;
+    right: 100px;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+  }
+
+  .modal-content {
+    background-color: #e6e6e6;
+    border-radius: 8px;
+    max-width: 100%;
+    overflow-y: auto;
+    width: 86%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  }
+
+  .book-content {
+    width: 90%;
+    padding: 0 10px 0 10px;
+    line-height: 25px;
+  }
+
+  .prologue-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .prologue-img {
+    width: 25vw;
+    height: 18vh;
+    object-fit: contain;
+  }
+
+  .chapter-one-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .chapter-one-img {
+    padding-top: 2vh;
+    padding-bottom: 1vh;
+    width: 25vw;
+    height: 13vh;
+    object-fit: contain;
+  }
+  .first-paragraph {
+    margin-top: 0;
+  }
+
+  .modal-header {
+    padding: 2vh 0 2vh 2vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e6e6e6;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+
+  .author-image-container {
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .author-image-container-inner {
+    object-fit: contain;
+    height: 40vh;
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .image-caption-one {
+    font-size: 2.5vh;
+    font-family: "EB Garamond", serif;
+    padding: 0;
+    margin: 0;
+  }
+
+  .image-caption-two {
+    font-size: 2vh;
+    font-family: "EB Garamond", serif;
+    font-style: italic;
+    padding: 0;
+    margin: 0;
+  }
+
+  .modal-content-subscribe {
+    max-width: 100%;
+    overflow-y: auto;
+    width: 86%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  .subscribe-text {
+    font-size: 2.5vh;
+    color: black;
+    margin-bottom: 2vh;
+  }
+
+  .email {
+    width: 100%;
+    height: 5vh;
+    border-radius: 1vh;
+    padding-left: 2vw;
+    border: none;
+    font-size: 1.75vh;
+  }
+
+  .sign-up-button {
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+    height: 5vh;
+    border-radius: 1vh;
+    padding-left: 10px;
+    border: none;
+    transition: transform 0.1s;
+    font-size: 2vh;
+  }
+
+  .email-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1vh;
+    width: 65vw;
+  }
+
+  .modal-header-subscribe {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d1bd64;
+    border-top-left-radius: 1vh;
+    border-top-right-radius: 1vh;
+    height: 5vh;
+  }
+
+  .modal-footer-subscribe {
+    border-bottom-left-radius: 1vh;
+    border-bottom-right-radius: 1vh;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d1bd64;
+    height: 5vh;
+  }
+
+  .close-button-subscribe {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: black;
+    padding: 1vh;
+  }
+
+  .close-button-credits {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: black;
+    padding: 1vh;
+  }
+
+  .modal-content-credits {
+    max-width: 100%;
+    overflow-y: auto;
+    width: 86%;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  .modal-header-credits {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e6e6e6;
+    border-top-left-radius: 1vh;
+    border-top-right-radius: 1vh;
+    height: 5vh;
+  }
+
+  .modal-footer-credits {
+    border-bottom-left-radius: 1vh;
+    border-bottom-right-radius: 1vh;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e6e6e6;
+    height: 5vh;
+  }
+
+  .modal-content-form {
+    background-color: #e6e6e6;
+    border-radius: 8px;
+    max-width: 100%;
+    overflow-y: auto;
+    width: 86%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  }
+
+  .chapter-text {
+    font-family: "EB Garamond", serif;
+    color: black;
+    font-size: 2.5vh;
+    text-align: justify;
+  }
 }
