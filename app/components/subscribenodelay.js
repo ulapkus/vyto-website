@@ -2,26 +2,30 @@ import { useRef, useState } from "react";
 
 export default function Subscribenodelay() {
   const formRef = useRef(null);
+  const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const scriptURL =
     "https://script.google.com/macros/s/AKfycbz01wL3Utoy9q86scYMmXCDU8EES-zk9mc2IMslrJBB85S7jxF5Y1dqP-QIy2b3WzOWxw/exec";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setShowBanner(true);
+    setLoading(true);
 
     try {
-      const response = await fetch(scriptURL, {
+      await fetch(scriptURL, {
         method: "POST",
         body: new FormData(formRef.current),
       });
-      console.log("Success!", response);
-      setTimeout(() => setShowBanner(false), 2000);
+      console.log("Success!");
+      setSubmitted(true);
     } catch (error) {
       console.error("Error!", error.message);
-      setShowBanner(false);
+    } finally {
+      setLoading(false);
     }
   };
+
   return (
     <>
       <div className="subscribe-text">
@@ -40,8 +44,18 @@ export default function Subscribenodelay() {
           placeholder="Email"
           required
         />
-        <button className="sign-up-button" type="submit">
-          SUBSCRIBE
+        <button
+          className="sign-up-button"
+          type="submit"
+          disabled={submitted || loading}
+        >
+          {loading ? (
+            <span className="loader"></span>
+          ) : submitted ? (
+            "SUBMITTED!"
+          ) : (
+            "SUBSCRIBE"
+          )}
         </button>
       </form>
     </>

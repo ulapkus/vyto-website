@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Author() {
   return (
     <div className="chapter-text">
-      <p className="title-author">About the Author</p>
+      <p className="title-author">About</p>
       <p className="chapter-text">
         Vytas Aukštuolis is a Lithuanian-American author whose work is shaped by
         a deep personal connection to Eastern Europe and over a decade of
@@ -17,14 +17,13 @@ export default function Author() {
         high-stakes world of lobbying. He has played a leading role in
         mobilizing the Lithuanian and broader Eastern European diaspora in the
         United States, advancing policy in support of the Baltic nations,
-        Ukraine, the Baltic nations, Ukraine, a democratic Belarus, and other
-        nations striving to resist authoritarian influence. As Russia launched
-        its full-scale invasion of Ukraine in 2022, Vytas emerged as a key
-        leader within the Central and East European Coalition (CEEC), an
-        alliance of U.S.-based diaspora organizations. During his tenure, the
-        CEEC helped maintain robust U.S. support for Ukraine by working closely
-        with Congress, executive agencies, foreign embassies, and state
-        governments.
+        Ukraine, a democratic Belarus, and other nations striving to resist
+        authoritarian influence. As Russia launched its full-scale invasion of
+        Ukraine in 2022, Vytas emerged as a key leader within the Central and
+        East European Coalition (CEEC), an alliance of U.S.-based diaspora
+        organizations. During his tenure, the CEEC helped maintain robust U.S.
+        support for Ukraine by working closely with Congress, executive
+        agencies, foreign embassies, and state governments.
       </p>
       <p className="chapter-text">
         Vytas also serves as Manager of International Relations at the American

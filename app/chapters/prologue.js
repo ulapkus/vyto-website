@@ -4,7 +4,7 @@ export default function Prologue() {
   return (
     <div className="chapter-text">
       <p className="title">Prologue</p>
-      <div className="prologue-img-container">
+      <div className="chapter-img-container">
         <Image src={prologueImage} alt="Prologue" className="prologue-img" />
       </div>
       <p className="first-paragraph">
@@ -23,7 +23,7 @@ export default function Prologue() {
         sea, only to be ruled by a dead bee.`}
       </p>
       <p>
-        {`Golden sap wept. And yet, she wanted this fate with every fiber of her
+        {`And yet, she wanted this fate with every fiber of her
         being. She couldn't trust anyone else with this duty. No one else
         understood the threads that bound everything together the way she did.`}
       </p>

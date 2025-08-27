@@ -8,7 +8,7 @@ import scroll from "../../public/bookimages/scroll.png";
 import notifications from "../../public/bookimages/notifications.png";
 import Subscribenodelay from "../components/subscribenodelay";
 import Credits from "../components/credits";
-import Author from "../chapters/author";
+import About from "../chapters/about";
 import Modal from "./modal";
 import Form from "../chapters/form";
 
@@ -34,7 +34,7 @@ function useWindowSize() {
 
 export default function BookIcons() {
   const [showModal, setShowModal] = useState(false);
-  const [showAuthor, setShowAuthor] = useState(false);
+  const [showAbout, setShowAbout] = useState(false);
   const [showForm, setShowForm] = useState(false);
   const [showSubscribe, setShowSubscribe] = useState(false);
   const [showCredits, setShowCredits] = useState(false);
@@ -42,13 +42,13 @@ export default function BookIcons() {
 
   useEffect(() => {
     document.body.style.overflow =
-      showModal || showAuthor || showForm || showSubscribe || showCredits
+      showModal || showAbout || showForm || showSubscribe || showCredits
         ? "hidden"
         : "auto";
     return () => {
       document.body.style.overflow = "auto";
     };
-  }, [showModal, showAuthor, showForm, showSubscribe, showCredits]);
+  }, [showModal, showAbout, showForm, showSubscribe, showCredits]);
 
   if (typeof width === "undefined") {
     return null;
@@ -60,10 +60,10 @@ export default function BookIcons() {
           <div className="bookicons-container">
             <Modal showModal={showModal} setShowModal={setShowModal} />
 
-            {showAuthor && (
+            {showAbout && (
               <div
                 className="modal-overlay"
-                onClick={() => setShowAuthor(false)}
+                onClick={() => setShowAbout(false)}
               >
                 <div
                   className="modal-content"
@@ -72,14 +72,14 @@ export default function BookIcons() {
                   <div className="modal-header">
                     <button
                       className="close-button"
-                      onClick={() => setShowAuthor(false)}
+                      onClick={() => setShowAbout(false)}
                     >
                       ×
                     </button>
                   </div>
                   <div className="modal-body">
                     <div className="book-content">
-                      <Author />
+                      <About />
                     </div>
                   </div>
                 </div>
@@ -171,12 +171,11 @@ export default function BookIcons() {
             <div className="bookicons-image-container-right-inner">
               <div
                 className="book-container"
-                onClick={() => setShowAuthor(true)}
+                onClick={() => setShowAbout(true)}
               >
                 <Image className="bookicons-image" alt="" src={pen} />
                 <div className="bookicons-title">
-                  AB<span className="calibri-o">O</span>UT THE AUTH
-                  <span className="calibri-o">O</span>R
+                  AB<span className="calibri-o">O</span>UT
                 </div>
               </div>
 
@@ -216,10 +215,10 @@ export default function BookIcons() {
           <div className="bookicons-container">
             <Modal showModal={showModal} setShowModal={setShowModal} />
 
-            {showAuthor && (
+            {showAbout && (
               <div
                 className="modal-overlay"
-                onClick={() => setShowAuthor(false)}
+                onClick={() => setShowAbout(false)}
               >
                 <div
                   className="modal-content"
@@ -228,14 +227,14 @@ export default function BookIcons() {
                   <div className="modal-header">
                     <button
                       className="close-button"
-                      onClick={() => setShowAuthor(false)}
+                      onClick={() => setShowAbout(false)}
                     >
                       ×
                     </button>
                   </div>
                   <div className="modal-body">
                     <div className="book-content">
-                      <Author />
+                      <About />
                     </div>
                   </div>
                 </div>
@@ -342,12 +341,11 @@ export default function BookIcons() {
                   onMouseLeave={(e) => {
                     e.currentTarget.style.transform = "scale(1)";
                   }}
-                  onClick={() => setShowAuthor(true)}
+                  onClick={() => setShowAbout(true)}
                 >
                   <Image className="bookicons-image" alt="" src={pen} />
                   <div className="bookicons-title">
-                    AB<span className="calibri-o">O</span>UT THE AUTH
-                    <span className="calibri-o">O</span>R
+                    AB<span className="calibri-o">O</span>UT
                   </div>
                 </div>
 

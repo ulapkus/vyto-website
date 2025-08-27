@@ -2,28 +2,21 @@ import { useRef, useState, useEffect } from "react";
 
 export default function Subscribe() {
   const formRef = useRef(null);
-  const [showBanner, setShowBanner] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const scriptURL =
     "https://script.google.com/macros/s/AKfycbz01wL3Utoy9q86scYMmXCDU8EES-zk9mc2IMslrJBB85S7jxF5Y1dqP-QIy2b3WzOWxw/exec";
 
   useEffect(() => {
-    // Handle scroll lock when modal is shown
-    if (showModal) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-
-    // Cleanup function to restore scrolling when component unmounts
+    document.body.style.overflow = showModal ? "hidden" : "auto";
     return () => {
       document.body.style.overflow = "auto";
     };
   }, [showModal]);
 
   useEffect(() => {
-    // Function to check if element is in viewport
     const isElementInViewport = (el) => {
       const rect = el.getBoundingClientRect();
       return (
@@ -34,15 +27,12 @@ export default function Subscribe() {
         rect.right <=
           (window.innerWidth || document.documentElement.clientWidth)
       );
-    }; // Function to handle scroll
+    };
+
     const handleScroll = () => {
       const element = document.getElementById("subscribe-trigger");
       if (element && isElementInViewport(element)) {
-        // Set timeout for 3 seconds
-        setTimeout(() => {
-          setShowModal(true);
-        }, 100);
-        // Remove scroll listener after triggering
+        setTimeout(() => setShowModal(true), 100);
         window.removeEventListener("scroll", handleScroll);
       }
     };
@@ -51,31 +41,35 @@ export default function Subscribe() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  if (!showModal) return <div id="subscribe-trigger"></div>;
+  if (!showModal) return <div id="subscribe-trigger" />;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setShowBanner(true);
+    setLoading(true);
 
     try {
-      const response = await fetch(scriptURL, {
+      await fetch(scriptURL, {
         method: "POST",
         body: new FormData(formRef.current),
       });
-      console.log("Success!", response);
-      setTimeout(() => setShowBanner(false), 2000);
+      console.log("Success!");
+      setSubmitted(true);
     } catch (error) {
       console.error("Error!", error.message);
-      setShowBanner(false);
+    } finally {
+      setLoading(false);
     }
   };
+
   return (
     <div
       className="modal-overlay-subscribe"
       onClick={() => setShowModal(false)}
     >
-      <div className="modal-content-subscribe">
-        {/* {showBanner && <div className="banner">Email sent!</div>} */}
+      <div
+        className="modal-content-subscribe"
+        onClick={(e) => e.stopPropagation()}
+      >
         <div className="modal-header-subscribe">
           <button
             className="close-button-subscribe"
@@ -100,9 +94,20 @@ export default function Subscribe() {
               type="email"
               placeholder="Email"
               required
+              disabled={submitted || loading}
             />
-            <button className="sign-up-button" type="submit">
-              SUBSCRIBE
+            <button
+              className="sign-up-button"
+              type="submit"
+              disabled={submitted || loading}
+            >
+              {loading ? (
+                <span className="loader"></span>
+              ) : submitted ? (
+                "Submitted!"
+              ) : (
+                "Subscribe"
+              )}
             </button>
           </form>
         </div>

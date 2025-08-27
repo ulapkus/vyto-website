@@ -6,7 +6,7 @@ export default function Chaptertwo() {
   return (
     <div className="chapter-text">
       <p className="title">Chapter Two</p>
-      <div className="chapter-one-img-container">
+      <div className="chapter-img-container">
         <Image src={chapterTwoImage} alt="" className="chapter-one-img" />
       </div>
       <p>

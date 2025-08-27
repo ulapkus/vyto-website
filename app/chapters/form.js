@@ -16,7 +16,7 @@ export default function Form() {
     setStatus({ submitted: false, submitting: true, error: null });
 
     try {
-      const response = await fetch("https://formspree.io/f/meoalkzl", {
+      const response = await fetch("https://formspree.io/f/mgvlvvvr", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -27,10 +27,7 @@ export default function Form() {
 
       if (response.ok) {
         setStatus({ submitted: true, submitting: false, error: null });
-        setInputs({ email: "", message: "" });
-        setTimeout(() => {
-          setStatus({ submitted: false, submitting: false, error: null });
-        }, 2000);
+        // ❌ removed setInputs(...) so values remain in fields
       } else {
         const data = await response.json();
         throw new Error(data.error || "Something went wrong");
@@ -53,7 +50,6 @@ export default function Form() {
 
   return (
     <div className="contact-form-container">
-      {status.submitted && <div className="banner">Message sent!</div>}
       <form onSubmit={handleSubmit} className="contact-form">
         <label>
           Your email:
@@ -65,6 +61,7 @@ export default function Form() {
             value={inputs.email}
             onChange={handleChange}
             required
+            disabled={status.submitting || status.submitted}
           />
         </label>
         <label>
@@ -75,15 +72,22 @@ export default function Form() {
             value={inputs.message}
             onChange={handleChange}
             required
+            disabled={status.submitting || status.submitted}
           />
         </label>
         <div className="contact-form-button-container">
           <button
             type="submit"
             className="contact-form-button"
-            disabled={status.submitting}
+            disabled={status.submitting || status.submitted}
           >
-            {status.submitting ? "Sending..." : "SUBMIT"}
+            {status.submitting ? (
+              <span className="loader"></span>
+            ) : status.submitted ? (
+              "Submitted!"
+            ) : (
+              "Submit"
+            )}
           </button>
         </div>
         {status.error && <p className="error-message">{status.error}</p>}

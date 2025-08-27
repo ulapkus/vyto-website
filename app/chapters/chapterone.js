@@ -4,7 +4,7 @@ export default function Chapterone() {
   return (
     <div className="chapter-text">
       <p className="title">Chapter One</p>
-      <div className="chapter-one-img-container">
+      <div className="chapter-img-container">
         <Image
           src={chapterOneImage}
           alt="Chapter One"
@@ -95,31 +95,31 @@ export default function Chapterone() {
         <i className="italics">{`Translation from Yiddish below.`}</i>
       </p>
       <div className="yiddish">
-        <div className="yiddish-paragraph">
+        <div className="chapter-paragraph">
           <p className="yiddish-text">{`,זאָ ג ניט קיין מאָ ל, אַ ז דו גייסט דעם לעצטן וועג`}</p>
           <p className="yiddish-text">{`.כאָ טש הימלען בלײַ ענע פֿאַ רשטעלן בלויע טעג`}</p>
           <p className="yiddish-text">{`- קומען וועט נאָ ך אונדזער אויסגעבענקטע שעה`}</p>
           <p className="yiddish-text">{`!ס׳וועט אַ פּויק טאָ ן אונדזער טראָ ט: מיר זײַ נען דאָ`}</p>
         </div>
-        <div className="yiddish-paragraph">
+        <div className="chapter-paragraph">
           <p className="yiddish-text">{`,פֿון גרינעם פּאַ למענלאַ נד ביז ווײַ סן לאַ נד פֿון שניי`}</p>
           <p className="yiddish-text">{`,מיר קומען אָ ן מיט אונדזער פּײַ ן, מיט אונדזער וויי`}</p>
           <p className="yiddish-text">{`,און וווּ געפֿאַ לן ס׳איז אַ שפּריץ פֿון אונדזער בלוט`}</p>
           <p className="yiddish-text">{`!שפּראָ צן וועט דאָ רט אונדזער גבֿורה, אונדזער מוט`}</p>
         </div>
-        <div className="yiddish-paragraph">
+        <div className="chapter-paragraph">
           <p className="yiddish-text">{`,ס׳וועט די מאָ רגנזון באַ גילדן אונדז דעם הײַ נט`}</p>
           <p className="yiddish-text">{`,און דער נעכטן וועט פֿאַ רשווינדן מיט דעם פֿײַ נט`}</p>
           <p className="yiddish-text">{`- נאָ ר אויב פֿאַ רזאַ מען וועט די זון אין דעם קאַ יאָ ר`}</p>
           <p className="yiddish-text">{`.ווי אַ פּאַ ראָ ל זאָ ל גיין דאָ ס ליד פֿון דור צו דור`}</p>
         </div>
-        <div className="yiddish-paragraph">
+        <div className="chapter-paragraph">
           <p className="yiddish-text">{`,דאָ ס ליד געשריבן איז מיט בלוט, און ניט מיט בלײַ`}</p>
           <p className="yiddish-text">{`,ס׳איז ניט קיין לידל פֿון אַ פֿויגל אויף דער פֿרײַ`}</p>
           <p className="yiddish-text">{`דאָ ס האָ ט אַ פֿאָ לק צווישן פֿאַ לנדיקע ווענט`}</p>
           <p className="yiddish-text">{`.דאָ ס ליד געזונגען מיט נאַ גאַ נעס אין די הענט`}</p>
         </div>
-        <div className="yiddish-paragraph">
+        <div className="chapter-paragraph">
           <p className="yiddish-text">{`,טאָ זאָ ג ניט קיין מאָ ל, אַ ז דו גייסט דעם לעצטן וועג`}</p>
           <p className="yiddish-text">{`.כאָ טש הימלען בלײַ ענע פֿאַ רשטעלן בלויע טעג`}</p>
           <p className="yiddish-text">{`- קומען וועט נאָ ך אונדזער אויסגעבענקטע שעה`}</p>
