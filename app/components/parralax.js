@@ -94,7 +94,7 @@ export default function Parralax() {
             dragElastic={0.1}
             priority="true"
           >
-            <Image src={castle} alt="" className="castle-inner" />
+            <Image src={castle} alt="" className="castle-inner" priority />
           </motion.div>
           <Subscribe />
           <motion.div
@@ -140,6 +140,7 @@ export default function Parralax() {
               src={underwater}
               alt="underwater"
               className="underwater-inner"
+              loading="lazy"
             />
             <BookIcons />
           </motion.div>
@@ -166,7 +167,6 @@ export default function Parralax() {
             style={{ y: y1, x: 0, scale }}
             dragConstraints={{ left: 0, right: 0 }}
             dragElastic={0.1}
-            priority="true"
           >
             <Image src={sky} alt="" className="sky-inner" />
           </motion.div>
@@ -201,11 +201,9 @@ export default function Parralax() {
             dragConstraints={{ left: 0, right: 0 }}
             dragElastic={0.1}
             className="lake"
-            priority="true"
             style={{
               y: y3,
               x: 0,
-              // scaleX: scale.get(),
               scaleY: scaleY,
             }}
           >
