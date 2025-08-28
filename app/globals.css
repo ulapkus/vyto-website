@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "Calibri Light";
-  src: url("/public/calibril.woff") format("woff");
+  src: url("/fonts/calibril.woff") format("woff");
 }
 
 @font-face {
@@ -12,20 +12,20 @@
   font-style: normal;
 }
 
-/* @font-face {
+@font-face {
   font-family: "CMU Serif";
-  src: url("/fonts/cmuserif.ttf") format("truetype");
+  src: url("/fonts/cmunrm.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
-} */
+}
 
 * {
   box-sizing: border-box;
 }
 
 .loader {
-  border: 2px solid #f3f3f3; /* light gray */
-  border-top: 2px solid #3498db; /* blue */
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #3498db;
   border-radius: 50%;
   width: 16px;
   height: 16px;

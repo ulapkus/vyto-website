@@ -13,7 +13,7 @@ export default function Chapterone() {
       </div>
       <p>
         {`Eleven thousand nine hundred thirty-nine years had passed since the
-        destruction of the Castle of the Sea. The day was warm— unusually warm
+        destruction of the Amber Castle. The day was warm— unusually warm
         for February. But these days, even the usual days felt unusual.`}
       </p>
       <p>
@@ -26,24 +26,25 @@ export default function Chapterone() {
         over the water.`}
       </p>
       <p>
-        {`From behind sliding glass doors, a pair of blue eyes watched the eagle
-        pick a branch. It passed the quivering ash tree, as all other birds do.
+        {`From behind sliding glass doors, a pair of eyes watched the eagle
+        pick a branch. It passed the quivering ash tree that never had any birds perch on it.
         But it also passed the majestic oak, the white-barked birch, and the
         hanging threads of a weeping willow.`}
       </p>
       <p>
-        {`The woman with the blue eyes stepped out from behind the sliding glass
+        {`The woman stepped out from behind the sliding glass
         doors, stepping to get a closer look at the visitor. Her kids, home from
         college for the weekend, also watched from their perches in the giant
         sycamore.`}
       </p>
       <p>
         {`The eagle flapped its wings and perched at the crown of a pine tree. The
-        woman's daughter, Eglė, smiled as the eagle settled on her namesake.`}
+        woman's daughter, Eglė, smiled since the eagle settled on a pine, `}
+        <i className="italics">{`an eglė.`}</i>
       </p>
       <p>
         {`Shivering, a reminder that it was still February, the woman went back
-        inside to add layers. She glanced at a screen that showed the latest
+        inside to add layers. She glanced at her phone that showed the latest
         news. The world felt like it had been falling apart for years, but some
         news still managed to emanate disbelief.`}
       </p>
@@ -55,7 +56,7 @@ export default function Chapterone() {
 
       <p>
         {`For America, it was another break from the old world order. For Eastern
-        Europe, this meant its invisible shield was fizzling fast.`}
+        Europe, this meant its invisible shield was dissipating fast.`}
       </p>
 
       <p>
@@ -67,8 +68,8 @@ export default function Chapterone() {
       <p>
         {`Her arm emerged from the thin linen shawl she found. It barely covered
         the tattoo of a mermaid reaching out to an amber gem that could be
-        mistaken for a sun. A wedding ring designed by an art deco artist guided
-        her long fingers through the library of records.`}
+        mistaken for a sun. Her long finger with a wedding ring designed by an art deco artist guided
+        her through the library of records.`}
       </p>
 
       <p>
@@ -194,7 +195,7 @@ export default function Chapterone() {
         {`The righteous anger permeated from the voice against those who executed
         an apocalypse on the land she loved and now walked— Lithuania. She
         called upon the spirits of the dead, seeking their help in her fight for
-        the living, so they might help prevent another apocalypse from ravaging
+        the living, so they might help prevent another slaughter of
         Eastern Europe.`}
       </p>
 
@@ -210,7 +211,7 @@ export default function Chapterone() {
       </p>
 
       <p>{`She noticed the two times often lived side-by-side.`}</p>
-      <div className="break"></div>
+      {/* <div className="break"></div> */}
       <p>
         {`The sliding glass doors opened, and a gentle breeze fluttered the
         woman's blonde hair. She sank her feet into the cool grass, amazed that
@@ -273,7 +274,7 @@ export default function Chapterone() {
       </p>
 
       <p>
-        {`Wow, Jūratė found him sexy. She stood up from her hug and walked over to
+        {`Wow, Jūratė found his cooking sexy. She stood up from her hug and walked over to
         the end of the dock. She let her feet dangle over the edge, her toes
         lightly graced the top of the lake.`}
       </p>
@@ -286,8 +287,7 @@ export default function Chapterone() {
 
       <p>
         {`Maybe it wasn't time to panic just yet, but it was long past time to
-        call an old friend. Jūratė dialed the number. At first, an unfamiliar
-        but pleasant voice answered the phone.`}
+        call an old friend. Jūratė dialed the number. No response. Jūratė tried a different number.`}
       </p>
 
       <p>{`"Hello, this is the White House. How may I direct your call?"`}</p>
@@ -311,6 +311,8 @@ export default function Chapterone() {
 
       <p>{`"Jura!!"`}</p>
 
+      <p>{`Harri was one of the last who called Jūratė by her American name – Jura. Waves of nostalgia filled Jūratė from the days when everyone unknowingly called her ‘Sea.’`}</p>
+
       <p>
         {`"Harri!" Jūratė let out a bellied laugh. "I can't believe I actually
         caught you."`}
@@ -328,8 +330,7 @@ export default function Chapterone() {
 
       <p>
         {`Harriett had been busy, but dearly missed her friends too. "Nah you're
-        right. Even now I've only got a minute, but I had to take the call when
-        I heard it was you.`}
+        right. Even now I've only got a minute.`}
       </p>
 
       <p>
@@ -347,7 +348,7 @@ export default function Chapterone() {
 
       <p>
         {`"So the House passed the America Alone Act, but that's not the end. The
-        bill still has to pass the Senate, but I'm afraid its chances of passing
+        bill still has to pass the Senate, but I'm afraid I can only whip a couple votes there. Its chances of passing
         there are high too." Jūratė was worried, but continued to listen.`}
       </p>
 
@@ -362,51 +363,16 @@ export default function Chapterone() {
       </p>
 
       <p>
-        {`"It's all up in the air Jura, but it's not looking good." President
-        Jefferson let the analysis sink in for a moment.`}
+        {`"It's all up in the air Jura, but it's not looking good." Jura, there’s something the American people need to understand. When has American freedom ever had anything to do with Eastern Europe?"`}
       </p>
 
-      <p>
-        {`I'll do what I can, but it might not be enough. Too many Americans just
-        don't believe the world's problems affect them. Too many Americans don't
-        think it's our job to protect our friends.`}
-      </p>
+      <p>{`Jūratė’s heart sank. Everyone and everything she knows, irrelevant. “Since the beginning! Ask your family. Please don’t look away. You can’t look away, Harri.”`}</p>
 
-      <p>
-        {`Jūratė struggled to understand. "But we're going to die, Harri."`}
-      </p>
+      <p>{`Harri knew she struck a nerve when her family was invoked. “What about my family? The Jefferson or Hemings side?”`}</p>
 
-      <p>
-        {`"I know. I know. Ugh, I hate to do this, but I have to run. Quickly -
-        how are the kids? Hawk and my buddy Eagle?"`}
-      </p>
+      <p>{`“Both!” Jūratė took a pause. Her friend deserved a benefit of the doubt. “I hear you. What about hybrid warfare? It’s actively hurting America. Meanwhile, Eastern Europe is the testing ground. You ever heard of – “`}</p>
 
-      <p>
-        {`Jūratė laughed. "Only you can call them Hawk and Eagle. Hawk, Vanagas,
-        is good. He's still adjusting to college. Eagle, Eglė, still talks about
-        the time you two spent in Kyoto. She loved that."`}
-      </p>
-
-      <p>
-        {`Harriett remembered the time fondly. "Eagle is really growing into an
-        amazing young woman. Tell her that Aunt Harriet would love her counsel
-        any time."`}
-      </p>
-
-      <p>{`Harriet could feel the polite smile through the phone.`}</p>
-      <p>{`"I'll pass the message. Okay, I'll let you get back to it."`}</p>
-
-      <p>
-        {`Harriet jumped back in. "Yes, I have to go. But it was nice hearing you.
-        I'll visit sometime soon. I think this business requires it."`}
-      </p>
-
-      <p>{`"That'd be lovely."`}</p>
-
-      <p>
-        {`With that, the call was done, but the message was clear for Jūratė. Find
-        protection or die.`}
-      </p>
+      <p>{`There was a crash outside. The line was cut. Did war finally come?`}</p>
     </div>
   );
 }

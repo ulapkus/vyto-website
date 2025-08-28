@@ -45,15 +45,15 @@ export default function Prologue() {
         {`To the fish, she was a goddess. Even though like every ruler, they still
         found plenty to grumble about.`}
       </p>
-      <div className="break"></div>
+      {/* <div className="break"></div> */}
       <p>
         {`That fateful morning, as Jūratė studied the Amber Bee, a hook made of
         bone dropped into the water before her. She had seen such hooks before—a
-        clever trick humans used to turn fish into food.`}
+        clever tool humans used to turn fish into food.`}
       </p>
       <p>
         {`However, Jūratė decided that today would be a good day to play a trick
-        back on the human who had set the trap. She reached out with her hands
+        back on the human. She reached out with her hands
         and gently tugged on the rope. The hook immediately rose, and Jūratė
         followed. She gave the rope another tug and again, the hook rose higher.
         Instead of tugging on the rope a third time, Jūratė began quickly
@@ -103,7 +103,7 @@ export default function Prologue() {
       </p>
       <p>
         {`For Jūratė, it meant something completely different. It was a warning
-        from her father: 'Don&apos;t be with this person.'`}
+        from her father: 'Don't be with this person.'`}
       </p>
       <p>
         {`As quickly as she could, Jūratė helped Kastytis back into the raft.
@@ -119,19 +119,18 @@ export default function Prologue() {
       <p>{`Nothing.`}</p>
       <p>{`Again, Jūratė shouted, her voice rising. "Kastyti! Kastyti!"`}</p>
       <p>
-        {`Instead of a response from Kastytis, Jūratė saw a lightning bolt crash
+        {`Instead of a response from Kastytis, Jūratė saw a volley of lightning bolts crash
         into the sea. The wrong being had heard the shouting.`}
       </p>
       <p>
         {`Jūratė swiftly dove back beneath the waves and began swimming towards
-        her castle. Ahead, a vast blackness loomed in the sea.`}
+        her castle. Ahead, a vast shadow loomed in the sea.`}
       </p>
       <p>
-        {`As she approached, she bumped into rocks and boulders, disoriented by
-    the shadow. She wondered if the darkness of the night had played tricks
+        {`As she approached, she bumped into rocks and boulders. She wondered if the darkness of the night had played tricks
     on her eyes.`}
       </p>
-      <p>{`She made it to the blackness and reached out her hand.`}</p>
+      <p>{`She made it to the shadow and reached out her hand.`}</p>
       <p>{`Could he really have done it?!`}</p>
       <p>
         {`It was her castle, directly struck by Perkūnas' lightning bolt. The

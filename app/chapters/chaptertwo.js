@@ -11,7 +11,7 @@ export default function Chaptertwo() {
       </div>
       <p>
         {`President Jefferson set the phone down. Her knees buckled. Atlas, it
-        appeared, set more weight on her shoulders.`}
+        felt, set more of the weight of the world on her shoulders.`}
       </p>
       <p>
         {`For years, a growing population in America felt like the government
@@ -26,11 +26,7 @@ export default function Chaptertwo() {
       <p>
         {`She stood up tall and brought her chin up. She was President Harriet
         Jefferson, after all. She wielded power that the first President
-        Jefferson couldn’t even imagine.`}
-      </p>
-      <p>
-        {`She’d have to pull herself together before stepping into the Oval to
-        meet with David Perez.`}
+        Jefferson couldn’t even imagine. She called over a few staffers to investigate the crash sound, then began pulling herself together before stepping into the Oval to meet with David Perez.`}
       </p>
       <p>
         {`My dear reader, there is something you should understand about David
@@ -85,7 +81,7 @@ export default function Chaptertwo() {
         been racing to build and open up its oil and gas pipelines into Europe
         ever since the power turned back on.`}
       </p>
-      <p>{`The pen didn’t lift from the notebook. `}</p>
+      <p>{`The pen didn’t lift from the notebook. She knew this.`}</p>
       <p>
         {`“Well, my client has been watching closely and learned that the
         pipelines are mainly flowing toward Western Europe, not Eastern.
@@ -149,22 +145,16 @@ export default function Chaptertwo() {
       <p>{`“Who?”`}</p>
       <p>{`“Russia’s neighbors.”`}</p>
       <p>{`“You don’t want to check with the State Department or CIA?”`}</p>
+      <p>{`She shook her head. “You’ll be my special envoy”`}</p>
+      <p>{`David widened his eyes at the opportunity. The rumor was true, you really can’t say no to a job offer from the President of the United States.`}</p>
       <p>
-        {`She shook her head. “This can’t be coming from the American government
-        at all.”`}
+        {`Harriet sat back in her chair. “Start with my friend Jura. She’s the head of a
+       private government contracting business the size of a medium-sized country.”`}
       </p>
-      <p>{`David winked. “Understood. And who’d pay me for this?” `}</p>
+      <p>{`David loved the high-profile challenge.`}</p>
+      <p>{`“Well, Madam President..” Now, he needed to be magical.`}</p>
       <p>
-        {`Harriet sat back in her chair. “Ask my friend Jura. She’s the head of a
-       multinational prison company that’s flipped a pretty penny turning
-       people away from violence. She should be able to pay for your services,
-        and you two can work your magic to prevent more violence.”`}
-      </p>
-      <p>{`‘Work your magic.’ David loved the flattery. `}</p>
-      <p>{`“Well, Madam President..” Now, he needed to be magical. `}</p>
-      <p>
-        {`He stood up, buttoning his jacket. This was certainly a challenge, but
-        one he couldn’t resist.`}
+        {`He stood up, buttoning his jacket.`}
       </p>
       <p>
         {`“Before the end of my story, between the banks of the Baltic, Black, and
@@ -173,7 +163,7 @@ export default function Chaptertwo() {
       </p>
       <p>
         {`President Jefferson shook his hand. She loved the confidence, but
-        doubted it all the same.`}
+        doubted it all the same. Anyway, it was good to get this powerful oil lobbyist out of her green agenda.`}
       </p>
       <Image src={europemap} className="europemap" alt="Europe Map" />
     </div>
