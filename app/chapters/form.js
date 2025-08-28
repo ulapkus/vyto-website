@@ -84,9 +84,9 @@ export default function Form() {
             {status.submitting ? (
               <span className="loader"></span>
             ) : status.submitted ? (
-              "Submitted!"
+              "SUBMITTED!"
             ) : (
-              "Submit"
+              "SUBMIT"
             )}
           </button>
         </div>

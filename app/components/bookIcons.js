@@ -192,7 +192,7 @@ export default function BookIcons() {
               <div className="book-container" onClick={() => setShowForm(true)}>
                 <Image className="bookicons-image" alt="" src={email} />
                 <div className="bookicons-title">
-                  C <span className="calibri-o">O</span>NTACT
+                  C<span className="calibri-o">O</span>NTACT
                 </div>
               </div>
 
@@ -389,7 +389,7 @@ export default function BookIcons() {
                 >
                   <Image className="bookicons-image" alt="" src={email} />
                   <div className="bookicons-title">
-                    C <span className="calibri-o">O</span>NTACT
+                    C<span className="calibri-o">O</span>NTACT
                   </div>
                 </div>
 

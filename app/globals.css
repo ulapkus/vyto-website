@@ -164,7 +164,7 @@ body {
 
 .mist {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   object-fit: fit;
   position: absolute;
   top: 700px;
@@ -219,7 +219,7 @@ body {
 
 .fogOne {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   object-fit: contain;
   position: absolute;
   bottom: 100px;
@@ -1007,7 +1007,7 @@ form textarea {
 
 .calibri-o {
   font-family: "CMU Serif";
-  font-size: 1.7vw;
+  font-size: 1.6vw;
 }
 
 .sky {
@@ -1093,7 +1093,7 @@ form textarea {
 
   .fogOne {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     object-fit: contain;
     position: absolute;
     bottom: 250px;
@@ -1248,7 +1248,7 @@ form textarea {
 
   .mist {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     object-fit: contain;
     position: absolute;
     top: 700px;

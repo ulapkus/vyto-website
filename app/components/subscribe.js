@@ -104,9 +104,9 @@ export default function Subscribe() {
               {loading ? (
                 <span className="loader"></span>
               ) : submitted ? (
-                "Submitted!"
+                "SUBMITTED!"
               ) : (
-                "Subscribe"
+                "SUBSCRIBE"
               )}
             </button>
           </form>
