@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Author() {
   return (
     <div className="chapter-text">
-      <p className="title-author">About</p>
+      <p className="title-author">About the Author</p>
       <p className="chapter-text">
         Vytas Aukštuolis is a Lithuanian-American author whose work is shaped by
         a deep personal connection to Eastern Europe and over a decade of

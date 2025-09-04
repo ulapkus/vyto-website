@@ -363,7 +363,7 @@ export default function Chapterone() {
       </p>
 
       <p>
-        {`"It's all up in the air Jura, but it's not looking good." Jura, there’s something the American people need to understand. When has American freedom ever had anything to do with Eastern Europe?"`}
+        {`"It's all up in the air Jura, but it's not looking good. Jura, there’s something the American people need to understand. When has American freedom ever had anything to do with Eastern Europe?"`}
       </p>
 
       <p>{`Jūratė’s heart sank. Everyone and everything she knows, irrelevant. “Since the beginning! Ask your family. Please don’t look away. You can’t look away, Harri.”`}</p>

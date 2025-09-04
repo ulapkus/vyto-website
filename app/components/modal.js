@@ -1,6 +1,7 @@
 import Prologue from "../chapters/prologue";
 import Chapterone from "../chapters/chapterone";
 import Chaptertwo from "../chapters/chaptertwo";
+import Author from "../chapters/author";
 
 export default function Modal({ showModal, setShowModal }) {
   if (!showModal) return null;
@@ -23,6 +24,9 @@ export default function Modal({ showModal, setShowModal }) {
             </div>
             <div className="chapter-section">
               <Chaptertwo />
+            </div>
+            <div className="chapter-section">
+              <Author />
             </div>
           </div>
         </div>

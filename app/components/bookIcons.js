@@ -175,7 +175,7 @@ export default function BookIcons() {
               >
                 <Image className="bookicons-image" alt="" src={pen} />
                 <div className="bookicons-title">
-                  AB<span className="calibri-o">O</span>UT
+                  AB<span className="calibri-o">O</span>UT THE BOOK
                 </div>
               </div>
 
@@ -345,7 +345,8 @@ export default function BookIcons() {
                 >
                   <Image className="bookicons-image" alt="" src={pen} />
                   <div className="bookicons-title">
-                    AB<span className="calibri-o">O</span>UT
+                    AB<span className="calibri-o">O</span>UT THE B
+                    <span className="calibri-o">OO</span>K
                   </div>
                 </div>
 

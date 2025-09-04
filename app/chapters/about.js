@@ -1,7 +1,7 @@
 export default function About() {
   return (
     <div className="chapter-text about-page">
-      <p className="title-author">About</p>
+      <p className="title-author">About the Book</p>
       <p className="chapter-text">
         Harriet and Jūratė are driven by power, fate, and myth.
       </p>

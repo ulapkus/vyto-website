@@ -79,7 +79,7 @@ export default function Chaptertwo() {
       <p>
         {`After a few chuckles, David let out a long sigh. “As you know, Russia’s
         been racing to build and open up its oil and gas pipelines into Europe
-        ever since the power turned back on.`}
+        ever since the power turned back on."`}
       </p>
       <p>{`The pen didn’t lift from the notebook. She knew this.`}</p>
       <p>
@@ -153,9 +153,7 @@ export default function Chaptertwo() {
       </p>
       <p>{`David loved the high-profile challenge.`}</p>
       <p>{`“Well, Madam President..” Now, he needed to be magical.`}</p>
-      <p>
-        {`He stood up, buttoning his jacket.`}
-      </p>
+      <p>{`He stood up, buttoning his jacket.`}</p>
       <p>
         {`“Before the end of my story, between the banks of the Baltic, Black, and
         Adriatic Seas, a Great Nation will rise. That is a promise I swear to
