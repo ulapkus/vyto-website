@@ -15,10 +15,10 @@
     "framer-motion": "^11.18.1",
     "gsap": "^3.12.5",
     "motion": "^11.18.1",
-    "next": "15.0.3",
+    "next": "15.0.5",
     "pdfjs-dist": "3.11.174",
-    "react": "19.0.0",
-    "react-dom": "19.0.0",
+    "react": "19.0.1",
+    "react-dom": "19.0.1",
     "react-intersection-observer": "^9.15.0",
     "three": "^0.170.0"
   },
